@@ -1,0 +1,11 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.exe
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.runtimeconfig.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.runtimeconfig.dev.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos1\EstadisticaDeAlumnos1\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos1.pdb
