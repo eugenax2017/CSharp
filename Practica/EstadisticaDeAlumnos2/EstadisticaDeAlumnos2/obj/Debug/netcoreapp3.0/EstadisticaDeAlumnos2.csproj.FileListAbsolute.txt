@@ -1,0 +1,14 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.exe
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.runtimeconfig.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.runtimeconfig.dev.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\ClassLibrary.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\bin\Debug\netcoreapp3.0\ClassLibrary.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.csproj.CopyComplete
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\EstadisticaDeAlumnos2\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos2.pdb

@@ -1,0 +1,8 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\bin\Debug\netstandard2.0\ClassLibrary.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos2\ClassLibrary\obj\Debug\netstandard2.0\ClassLibrary.pdb
