@@ -18,16 +18,18 @@ namespace Academy.Lib.Models
 
             if (CurrentValidation.IsSuccess)
             {
-                var repo = new Repository<T>();
+                //var repo = new Repository<T>();
+                var repo = new StudentRepository();
 
                 if (this.Id == Guid.Empty)
                 {
                     this.Id = Guid.NewGuid();
-                    output = repo.Add(this as T);
+                    /*output = repo.Add(this as T);
+                    output = repo.Add(this);*/
                 }
                 else
                 {
-                    output = repo.Update(this as T);
+                    //output = repo.Update(this as T);
                 }
             }
 

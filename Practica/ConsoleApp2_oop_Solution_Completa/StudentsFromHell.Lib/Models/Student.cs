@@ -41,6 +41,9 @@ namespace Academy.Lib.Models
             }
             #endregion
 
+            if (output.IsSuccess)
+                output.ValidatedResult = dni;
+
             return output;
         }
 
@@ -107,6 +110,9 @@ namespace Academy.Lib.Models
                 output.IsSuccess = false;
                 output.Errors.Add("el nombre delalumno no puede estar vacío");
             }
+
+            if (output.IsSuccess)
+                output.ValidatedResult = name;
 
             return output;
         }

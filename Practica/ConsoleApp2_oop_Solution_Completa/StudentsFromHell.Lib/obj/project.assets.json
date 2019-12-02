@@ -186,11 +186,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\trainingexample1_averagemarks\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\Academy.Lib.csproj",
+      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\Academy.Lib.csproj",
       "projectName": "Academy.Lib",
-      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\trainingexample1_averagemarks\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\Academy.Lib.csproj",
+      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\Academy.Lib.csproj",
       "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\trainingexample1_averagemarks\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\obj\\",
+      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\ConsoleApp2_oop_Solution_Completa\\StudentsFromHell.Lib\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
