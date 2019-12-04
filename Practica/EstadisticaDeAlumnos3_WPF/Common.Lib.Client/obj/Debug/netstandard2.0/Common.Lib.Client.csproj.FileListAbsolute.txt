@@ -1,0 +1,11 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.Client.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.Client.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.Client.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.csproj.CopyComplete
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.Client\obj\Debug\netstandard2.0\Common.Lib.Client.pdb

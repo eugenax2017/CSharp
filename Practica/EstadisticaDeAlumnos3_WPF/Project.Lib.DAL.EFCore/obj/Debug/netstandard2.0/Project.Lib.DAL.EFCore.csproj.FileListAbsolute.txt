@@ -1,0 +1,5 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Project.Lib.DAL.EFCore.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Project.Lib.DAL.EFCore.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Project.Lib.DAL.EFCore.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Project.Lib.DAL.EFCore.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Project.Lib.DAL.EFCore.AssemblyInfo.cs
