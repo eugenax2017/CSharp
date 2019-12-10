@@ -1,0 +1,17 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.exe
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.runtimeconfig.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.runtimeconfig.dev.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\MainWindow.g.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core_MarkupCompile.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core_MarkupCompile.lref
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\MainWindow.baml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.g.resources
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.pdb

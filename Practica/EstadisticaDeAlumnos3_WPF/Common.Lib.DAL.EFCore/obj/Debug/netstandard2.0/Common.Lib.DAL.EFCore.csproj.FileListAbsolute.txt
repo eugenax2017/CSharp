@@ -6,3 +6,6 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Comm
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Common.Lib.DAL.EFCore.pdb
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Common.Lib.DAL.EFCore.dll
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Common.Lib.DAL.EFCore.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Common.Lib.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Common.Lib.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Common.Lib.DAL.EFCore\obj\Debug\netstandard2.0\Common.Lib.DAL.EFCore.csproj.CopyComplete

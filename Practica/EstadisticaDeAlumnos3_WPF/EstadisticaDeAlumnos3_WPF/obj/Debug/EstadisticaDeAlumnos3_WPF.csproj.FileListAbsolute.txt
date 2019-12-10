@@ -98,3 +98,16 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Esta
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\EntityFramework.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\System.Data.SQLite.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\EntityFramework.xml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\System.Data.SQLite.xml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\Common.Lib.Client.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\Common.Lib.DAL.EFCore.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\Common.Lib.Client.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\EstadisticaDeAlumnos3_WPF\bin\Debug\Common.Lib.DAL.EFCore.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "EstadisticaDeAlumnos3_WPF_Core/1.0.0": {
+        "runtime": {
+          "EstadisticaDeAlumnos3_WPF_Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EstadisticaDeAlumnos3_WPF_Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
