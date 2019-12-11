@@ -5,8 +5,45 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EstadisticaDeAlumnos3_WPF_Core"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <TabControl x:Name="TabControl">
+        <TabItem Header="Students">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="butt1" Grid.Row="0" Grid.Column="0" Content="Add" Click="butt1_Click"></Button>
+                <Button Name="butt2" Grid.Row="0" Grid.Column="1" Content="Delete" Click="butt2_Click_1"></Button>
+                <ListView Name="lstbox" x:FieldModifier="public" Grid.Row="1" Grid.ColumnSpan="2">
+                    <ListView.View>
+                        <GridView x:Name="gridViewSt">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Dni}" Width="100">Dni</GridViewColumn>                            
+                        </GridView>
+                    </ListView.View>                    
+                </ListView>
+            </Grid>
+        </TabItem>
+        <TabItem Header="Subjects">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="5*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Button Name="butt3" Grid.Row="0" Content="Add" Click="butt2_Click" ></Button>
+                <ListView Name="lstbox1" Grid.Row="1">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Name="name_lstbox" Text="{Binding Name}" />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </TabItem>
+    </TabControl>
 </Window>

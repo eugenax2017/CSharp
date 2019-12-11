@@ -20,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Common.Lib.DAL.EFCore\Common.Lib.DAL.EFCore.csproj" />
+    <ProjectReference Include="..\Common.Lib\Common.Lib.csproj" />
   </ItemGroup>
 
 </Project>

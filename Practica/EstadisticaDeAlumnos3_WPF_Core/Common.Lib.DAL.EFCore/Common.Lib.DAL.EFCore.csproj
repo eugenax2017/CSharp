@@ -21,4 +21,8 @@
     <ProjectReference Include="..\Common.Lib\Common.Lib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Context\" />
+  </ItemGroup>
+
 </Project>

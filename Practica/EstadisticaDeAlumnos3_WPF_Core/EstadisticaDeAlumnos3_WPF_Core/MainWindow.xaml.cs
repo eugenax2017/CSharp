@@ -1,7 +1,13 @@
-﻿using Common.Lib.DAL.EFCore.Context;
+﻿//using Common.Lib.DAL.EFCore.Context;
+using Common.Lib.Context.Interfaces;
+using Common.Lib.Infrastructure;
+using Common.Lib.Models;
+using Common.Lib.Models.Core;
+using EstadisticaDeAlumnos3_WPF_Core.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,10 +31,82 @@ namespace EstadisticaDeAlumnos3_WPF_Core
         public MainWindow()
         {
             InitializeComponent();
-            using (var db = new ProjectDbContext())
+
+            var bootstrapper = new Bootstrapper();
+
+            var dbConnection = ConfigurationManager.ConnectionStrings["ProjectDb"].ConnectionString;
+
+            Entity.DepCon = new SimpleDependencyContainer();
+
+            bootstrapper.Init(Entity.DepCon, GetDbConstructor(dbConnection));
+
+            //using (var db = new ProjectDbContext()) // 1 variant
+            //{
+            //    db.Database.Migrate();
+            //}
+        }
+
+        public void RefreshData()
+        {
+            var repo = Entity.DepCon.Resolve<IRepository<Student>>();
+
+            lstbox.ItemsSource = repo.QueryAll().ToList();
+        }
+
+        private static Func<ProjectDbContext> GetDbConstructor(string dbConnection)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<ProjectDbContext>();
+
+            optionsBuilder.UseSqlite(dbConnection);
+
+            var dbContextConst = new Func<ProjectDbContext>(() =>
             {
-                db.Database.Migrate();
-            }
+                return new ProjectDbContext(optionsBuilder.Options);
+            });
+            return dbContextConst;
+        }
+
+        private void butt1_Click(object sender, RoutedEventArgs e)
+        {
+            EditStudent subWindow = new EditStudent();
+            subWindow.Owner = this;
+            subWindow.Show();           
+
+            //using (var db = new ProjectDbContext())
+            //{
+            //    Student item = new Student { Name = "Evgenii", Dni = "123" };
+            //    db.Students.Add(item);
+            //    db.SaveChanges();
+            //    lstbox.ItemsSource = db.Students.ToList();
+            //}
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+
+            //using (var db = new ProjectDbContext())
+            //{
+            //    lstbox.ItemsSource = db.Students.ToList();
+            //}
+            RefreshData();
+
+        }
+
+        private void butt2_Click(object sender, RoutedEventArgs e)
+        {
+            //using (var db = new ProjectDbContext())
+            //{
+            //    //db.Students.
+            //}
+        }
+
+        private void butt2_Click_1(object sender, RoutedEventArgs e)
+        {
+            var selectItem = (Student)lstbox.SelectedValue;
+
+            selectItem.Delete();
+
+            RefreshData();
         }
     }
 }

@@ -16,5 +16,10 @@ namespace Common.Lib.Models
         {
             return base.Save<Student>();
         }
+
+        public SaveResult<Student> Delete()
+        {
+            return base.Delete<Student>();
+        }
     }
 }

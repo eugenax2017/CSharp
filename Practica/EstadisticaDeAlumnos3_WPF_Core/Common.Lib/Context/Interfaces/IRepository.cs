@@ -16,5 +16,7 @@ namespace Common.Lib.Context.Interfaces
         SaveResult<T> Add(T entity);
 
         SaveResult<T> Update(T entity);
+
+        SaveResult<T> Delete(T entity);
     }
 }

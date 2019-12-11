@@ -53,5 +53,13 @@ namespace Common.Lib.Models.Core
 
             return output;
         }
+
+        public virtual SaveResult<T> Delete<T>() where T : Entity
+        {
+            var output = new SaveResult<T>();
+            var repo = DepCon.Resolve<IRepository<T>>();
+            repo.Delete(this as T);
+            return output;
+        }
     }
 }
