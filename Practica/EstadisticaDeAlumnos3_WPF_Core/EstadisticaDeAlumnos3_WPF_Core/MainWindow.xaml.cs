@@ -50,7 +50,8 @@ namespace EstadisticaDeAlumnos3_WPF_Core
         {
             var repo = Entity.DepCon.Resolve<IRepository<Student>>();
 
-            lstbox.ItemsSource = repo.QueryAll().ToList();
+            lstbox.ItemsSource = repo.QueryAll().ToList();  
+            
         }
 
         private static Func<ProjectDbContext> GetDbConstructor(string dbConnection)
@@ -107,6 +108,14 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             selectItem.Delete();
 
             RefreshData();
+        }
+
+        private void butt3_Click(object sender, RoutedEventArgs e)
+        {
+            var selectItem = (Student)lstbox.SelectedValue;
+            EditStudent subWindow = new EditStudent(selectItem);
+            subWindow.Owner = this;
+            subWindow.Show();
         }
     }
 }

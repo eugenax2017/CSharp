@@ -37,6 +37,9 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Migrations
                 {
                     b.HasBaseType("Common.Lib.Models.Core.Entity");
 
+                    b.Property<int>("ChairNumber")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Dni")
                         .HasColumnType("TEXT");
 

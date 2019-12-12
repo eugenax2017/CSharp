@@ -18,5 +18,7 @@ namespace Common.Lib.Context.Interfaces
         SaveResult<T> Update(T entity);
 
         SaveResult<T> Delete(T entity);
+
+        //IQueryable<T> FindByField();
     }
 }

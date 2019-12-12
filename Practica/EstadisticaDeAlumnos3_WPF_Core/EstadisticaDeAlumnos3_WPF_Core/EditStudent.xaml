@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EstadisticaDeAlumnos3_WPF_Core"
         mc:Ignorable="d"
-        Title="Add student" Height="200" Width="300
+        Title="Add student" Height="300" Width="400
         ">
     <StackPanel Margin="10">
 		<Label Content="_Name:" Target="{Binding ElementName=txtName}" />
 		<TextBox Name="txtName" />
 		<Label Content="_DNI:" Target="{Binding ElementName=txtDni}" />
 		<TextBox Name="txtDni" />
-        <Button Margin="0,30,0,0" Content="Add" Name="btnAdd" Click="btnAdd_Click"></Button>
+        <Label Content="_Chair:" Target="{Binding ElementName=txtChair}" />
+        <TextBox Name="txtChair"></TextBox>
+        <Button Margin="0,20,0,0" Content="Add" Name="btnAdd" Click="btnAdd_Click"></Button>
 	</StackPanel>
 </Window>

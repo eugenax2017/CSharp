@@ -41,7 +41,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.EFCore
 
         public IQueryable<T> QueryAll()
         {
-            return _dbContext.Set<T>().AsQueryable();
+            return _dbContext.Set<T>().AsQueryable();            
         }
 
         public SaveResult<T> Update(T entity)

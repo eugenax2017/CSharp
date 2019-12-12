@@ -22,8 +22,8 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Context
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // 1 variant
         //{
-        //    optionsBuilder.UseSqlite("Data Source = Test.db"); 
-        //    base.OnConfiguring(optionsBuilder); 
+        //    optionsBuilder.UseSqlite("Data Source = C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\EstadisticaDeAlumnos3_WPF_Core\\EstadisticaDeAlumnos3_WPF_Core\\bin\\Debug\\netcoreapp3.0\\Test2.db");
+        //    base.OnConfiguring(optionsBuilder);
         //}
         protected override void OnModelCreating(ModelBuilder builder)
         {

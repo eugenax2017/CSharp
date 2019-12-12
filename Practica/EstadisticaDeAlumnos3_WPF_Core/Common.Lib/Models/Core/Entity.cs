@@ -15,7 +15,7 @@ namespace Common.Lib.Models.Core
 
         #endregion
 
-        public Guid Id { get; set; }
+        public Guid Id { get; set; }       
 
         public ValidationResult CurrentValidation { get; private set; }
 
