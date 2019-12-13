@@ -70,7 +70,7 @@ namespace Common.Lib.Models
             return output;
         }
 
-        public static ValidationResult<int> ValidateChairNumber(string chairNumberText)
+        public static ValidationResult<int> ValidateChairNumber(string chairNumberText, bool dublicate = true )
         {
             var output = new ValidationResult<int>()
             {
@@ -102,8 +102,8 @@ namespace Common.Lib.Models
 
             #region check if the char is already in use
 
-            if (isConversionOk)
-            {
+            if (isConversionOk && dublicate)
+            {                
                 var repoStudents = DepCon.Resolve<IRepository<Student>>(); 
                 var currentStudentInChair = repoStudents.QueryAll().FirstOrDefault(s => s.ChairNumber == chairNumber);
 
@@ -183,9 +183,31 @@ namespace Common.Lib.Models
 
             // cambiar ValidateName para que sea igual que ValidateDni
             ValidateName(output);
-            ValidateDni(output);
-            ValidateChairNumber(output);            
+            if (this.Id == default)
+            {
+                ValidateDni(output);
+                ValidateChairNumber(output);
+            }                            
             return output;
+        }
+
+        public Student Clone(Student oldStudent)
+        {
+            var type = oldStudent.GetType();
+            var props = type.GetProperties();
+            Student newStudent = new Student();
+            foreach (var prop in props)
+            { 
+                var r = 0;
+            //    newStudent[prop] = oldStudent[prop];
+            }
+            return new Student
+            {
+                Id = oldStudent.Id,
+                Name = oldStudent.Name,
+                Dni = oldStudent.Dni,
+                ChairNumber = oldStudent.ChairNumber                
+            };
         }
 
         #endregion

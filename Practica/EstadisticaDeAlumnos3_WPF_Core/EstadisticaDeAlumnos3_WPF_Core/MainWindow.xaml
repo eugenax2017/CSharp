@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:EstadisticaDeAlumnos3_WPF_Core"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
-    <TabControl x:Name="TabControl">
+    <TabControl x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged">
         <TabItem Header="Students">
             <Grid>
                 <Grid.RowDefinitions>
@@ -32,19 +32,26 @@
                 </ListView>
             </Grid>
         </TabItem>
-        <TabItem Header="Subjects">
+        <TabItem Header="Subjects" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="5*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Button Name="butt4" Grid.Row="0" Content="Add" Click="butt2_Click" ></Button>
-                <ListView Name="lstbox1" Grid.Row="1">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Name="name_lstbox" Text="{Binding Name}" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Name="butt4" Grid.Row="0" Grid.Column="0" Content="Add" ></Button>
+                <Button Name="butt5" Grid.Row="0" Grid.Column="1" Content="Delete" ></Button>
+                <Button Name="butt6" Grid.Row="0" Grid.Column="2" Content="Update"  ></Button>
+                <ListView Name="lstbox_sb" x:FieldModifier="public" Grid.Row="1" Grid.ColumnSpan="3">
+                    <ListView.View>
+                        <GridView x:Name="gridViewSb">
+                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>                            
+                        </GridView>
+                    </ListView.View>
                 </ListView>
             </Grid>
         </TabItem>

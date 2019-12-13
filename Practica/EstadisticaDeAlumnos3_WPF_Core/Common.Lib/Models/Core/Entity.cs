@@ -60,6 +60,6 @@ namespace Common.Lib.Models.Core
             var repo = DepCon.Resolve<IRepository<T>>();
             repo.Delete(this as T);
             return output;
-        }
+        }        
     }
 }

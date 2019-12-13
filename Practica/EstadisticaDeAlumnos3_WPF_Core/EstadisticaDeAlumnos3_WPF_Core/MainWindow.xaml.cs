@@ -54,6 +54,14 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             
         }
 
+        public void RefreshData_sb()
+        {
+            var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
+
+            lstbox_sb.ItemsSource = repo.QueryAll().ToList();
+
+        }
+
         private static Func<ProjectDbContext> GetDbConstructor(string dbConnection)
         {
             var optionsBuilder = new DbContextOptionsBuilder<ProjectDbContext>();
@@ -116,6 +124,16 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             EditStudent subWindow = new EditStudent(selectItem);
             subWindow.Owner = this;
             subWindow.Show();
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var tab = sender as TabItem;
+            if (tab != null)
+            {
+                if (tab.Header == "Subjects")
+                    RefreshData_sb();
+            }
         }
     }
 }

@@ -64,3 +64,5 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\bin\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.dll.config
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EditStudent.g.cs
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EditStudent.baml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EditSubject.g.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EditSubject.baml
