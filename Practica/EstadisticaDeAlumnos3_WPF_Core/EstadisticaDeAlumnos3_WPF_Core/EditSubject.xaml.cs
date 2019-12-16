@@ -23,18 +23,24 @@ namespace EstadisticaDeAlumnos3_WPF_Core
     public partial class EditSubject : Window
     {
         private bool Update = false;
+
         Subject subject_for_update;
         public EditSubject()
         {
             InitializeComponent();
         }
-        public EditSubject(Student student)
+        public EditSubject(Subject subject)
         {
             InitializeComponent();
 
-            txtName.Text = student.Name;
-            
-            Update = true;
+            if (subject != null)
+            {
+                txtName.Text = subject.Name;
+
+                subject_for_update = subject;
+
+                Update = true;
+            }
         }
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)

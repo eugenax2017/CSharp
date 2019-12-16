@@ -44,7 +44,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.EFCore
 
         public SaveResult<Subject> Update(Subject entity)
         {
-            throw new NotImplementedException();
+            return base.Update(entity);
         }
     }
 }

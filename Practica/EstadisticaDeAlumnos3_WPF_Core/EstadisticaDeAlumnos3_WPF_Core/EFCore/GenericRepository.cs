@@ -63,9 +63,13 @@ namespace EstadisticaDeAlumnos3_WPF_Core.EFCore
         public SaveResult<T> Delete(T entity)
         {
             var output = new SaveResult<T>();
-            _dbContext.Set<T>().Remove(entity);
-            _dbContext.SaveChanges();
-            output.IsSuccess = true;
+            output.IsSuccess = false;
+            if (entity != null)
+            {
+                _dbContext.Set<T>().Remove(entity);
+                _dbContext.SaveChanges();
+                output.IsSuccess = true;                
+            }
             return output;
         }
     }

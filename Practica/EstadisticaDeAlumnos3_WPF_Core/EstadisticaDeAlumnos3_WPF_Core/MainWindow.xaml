@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <TabControl x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged">
-        <TabItem Header="Students">
+        <TabItem Name ="Students" Header="Students">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
@@ -19,7 +19,7 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button Name="butt1" Grid.Row="0" Grid.Column="0" Content="Add" Click="butt1_Click"></Button>
-                <Button Name="butt2" Grid.Row="0" Grid.Column="1" Content="Delete" Click="butt2_Click_1"></Button>
+                <Button Name="butt2" Grid.Row="0" Grid.Column="1" Content="Delete" Click="butt2_Click"></Button>
                 <Button Name="butt3" Grid.Row="0" Grid.Column="2" Content="Update" Click="butt3_Click" ></Button>
                 <ListView Name="lstbox" x:FieldModifier="public" Grid.Row="1" Grid.ColumnSpan="3">
                     <ListView.View>
@@ -32,7 +32,7 @@
                 </ListView>
             </Grid>
         </TabItem>
-        <TabItem Header="Subjects" >
+        <TabItem Name="Subjects" Header="Subjects" >
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
@@ -43,9 +43,9 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Name="butt4" Grid.Row="0" Grid.Column="0" Content="Add" ></Button>
-                <Button Name="butt5" Grid.Row="0" Grid.Column="1" Content="Delete" ></Button>
-                <Button Name="butt6" Grid.Row="0" Grid.Column="2" Content="Update"  ></Button>
+                <Button Name="butt4" Grid.Row="0" Grid.Column="0" Content="Add" Click="butt4_Click" ></Button>
+                <Button Name="butt5" Grid.Row="0" Grid.Column="1" Content="Delete" Click="butt5_Click" ></Button>
+                <Button Name="butt6" Grid.Row="0" Grid.Column="2" Content="Update" Click="butt6_Click"  ></Button>
                 <ListView Name="lstbox_sb" x:FieldModifier="public" Grid.Row="1" Grid.ColumnSpan="3">
                     <ListView.View>
                         <GridView x:Name="gridViewSb">

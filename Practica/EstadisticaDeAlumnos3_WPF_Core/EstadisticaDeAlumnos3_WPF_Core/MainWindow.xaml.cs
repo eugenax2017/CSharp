@@ -98,18 +98,9 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             //    lstbox.ItemsSource = db.Students.ToList();
             //}
             RefreshData();
-
-        }
+        }            
 
         private void butt2_Click(object sender, RoutedEventArgs e)
-        {
-            //using (var db = new ProjectDbContext())
-            //{
-            //    //db.Students.
-            //}
-        }
-
-        private void butt2_Click_1(object sender, RoutedEventArgs e)
         {
             var selectItem = (Student)lstbox.SelectedValue;
 
@@ -128,12 +119,48 @@ namespace EstadisticaDeAlumnos3_WPF_Core
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            var tab = sender as TabItem;
-            if (tab != null)
+            if (e.OriginalSource is TabControl)
             {
-                if (tab.Header == "Subjects")
-                    RefreshData_sb();
-            }
+                TabControl tab = sender as TabControl;
+                if (tab != null)
+                {
+                    TabItem tabItem = tab.SelectedValue as TabItem;
+                    if (tabItem.Name == "Subjects")
+                        RefreshData_sb();
+                }
+            }           
+            
+            //if (MyTabItem1 != null && MyTabItem1.IsSelected)
+            //    // do your staff
+            //if (MyTabItem2 != null && MyTabItem2.IsSelected)
+            //        // do your staff
+            //if (MyTabItem3 != null && MyTabItem3.IsSelected)
+            //        // do your staff
+        }
+
+        private void butt4_Click(object sender, RoutedEventArgs e)
+        {
+            EditSubject subWindow = new EditSubject();
+            subWindow.Owner = this;
+            subWindow.Show();
+        }
+
+        private void butt5_Click(object sender, RoutedEventArgs e)
+        {
+            var selectItem = (Subject)lstbox_sb.SelectedValue;
+
+            selectItem.Delete();
+
+            RefreshData_sb();
+
+        }    
+
+        private void butt6_Click(object sender, RoutedEventArgs e)
+        {
+            var selectItem = (Subject)lstbox_sb.SelectedValue;
+            EditSubject subWindow = new EditSubject(selectItem);
+            subWindow.Owner = this;
+            subWindow.Show();
         }
     }
 }
