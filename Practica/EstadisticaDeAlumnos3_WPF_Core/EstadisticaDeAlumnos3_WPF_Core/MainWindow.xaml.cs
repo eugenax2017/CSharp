@@ -148,11 +148,11 @@ namespace EstadisticaDeAlumnos3_WPF_Core
         private void butt5_Click(object sender, RoutedEventArgs e)
         {
             var selectItem = (Subject)lstbox_sb.SelectedValue;
-
-            selectItem.Delete();
-
-            RefreshData_sb();
-
+            if (selectItem != null)
+            {
+                selectItem.Delete();
+                RefreshData_sb();
+            }
         }    
 
         private void butt6_Click(object sender, RoutedEventArgs e)

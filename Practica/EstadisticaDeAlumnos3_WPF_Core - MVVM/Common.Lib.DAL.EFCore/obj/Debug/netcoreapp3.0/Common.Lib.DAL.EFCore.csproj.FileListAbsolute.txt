@@ -1,0 +1,13 @@
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.deps.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.csprojAssemblyReference.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.AssemblyInfoInputs.cache
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.AssemblyInfo.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.runtimeconfig.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.runtimeconfig.dev.json
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\bin\Debug\netcoreapp3.0\Common.Lib.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.csproj.CopyComplete
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.dll
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core\Common.Lib.DAL.EFCore\obj\Debug\netcoreapp3.0\Common.Lib.DAL.EFCore.pdb
