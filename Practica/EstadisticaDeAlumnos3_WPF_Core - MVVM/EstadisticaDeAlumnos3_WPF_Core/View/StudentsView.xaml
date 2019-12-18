@@ -10,16 +10,26 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="5*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Button Name="butt1" Grid.Row="0" Grid.Column="0" Content="Add" Command="{Binding AddStudentCommand}"></Button>
-        <Button Name="butt2" Grid.Row="0" Grid.Column="1" Content="Delete" Command="{Binding DeleteStudentCommand}" ></Button>
-        <Button Name="butt3" Grid.Row="0" Grid.Column="2" Content="Update" Command="{Binding GetStudentsCommand}"></Button>
-        <DataGrid  SelectedItem="{Binding Path=SelectedStudent, Mode=TwoWay}" AutoGenerateColumns="False" Name="lstbox" x:FieldModifier="public" ItemsSource="{Binding Students}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
+        <WrapPanel Name="wp1" Margin="3" Grid.Row="0" Grid.Column="0">
+            <Label Content="_Name:" Target="{Binding ElementName=txtName}" Width="50" />
+            <TextBox VerticalAlignment="Center" Name="txtName" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>
+            <Label Content="_DNI:" Target="{Binding ElementName=txtDni}" Width="50" />
+            <TextBox Name="txtDni" VerticalAlignment="Center" Text="{Binding Dni, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193" />
+        </WrapPanel>
+        <WrapPanel Name="wp2" Margin="3" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <Label Content="_Chair:" Target="{Binding ElementName=txtChair}" Width="50" />
+            <TextBox Name="txtChair" VerticalAlignment="Center" Text="{Binding ChairNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="193"/>
+        </WrapPanel>
+        <Button Name="butt1" Grid.Row="0" Grid.Column="2" Content="Add" Command="{Binding AddStudentCommand}"></Button>
+
+        <DataGrid  SelectedItem="{Binding Path=SelectedStudent, Mode=OneWayToSource}" AutoGenerateColumns="False" Name="lstbox" x:FieldModifier="public" ItemsSource="{Binding Students, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="100" />
                 <DataGridTextColumn Header="Dni" Binding="{Binding Path=Dni}" Width="80" />
@@ -27,18 +37,19 @@
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete" Command="{Binding Path=DeleteStudentCommand}" ></Button>
+                            <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentsView}}, Path=DataContext.EditStudentCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn>
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button>Edit</Button>
+                            <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentsView}}, Path=DataContext.DeleteStudentCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Name="butt_get_st" Grid.Row="3" Grid.Column="3" Content="Update" Command="{Binding GetStudentsCommand}"></Button>
     </Grid>
 </UserControl>

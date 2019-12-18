@@ -30,7 +30,6 @@ namespace EstadisticaDeAlumnos3_WPF_Core
     {
         public MainWindow()
         {
-            InitializeComponent();
 
             var bootstrapper = new Bootstrapper();
 
@@ -39,6 +38,8 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             Entity.DepCon = new SimpleDependencyContainer();
 
             bootstrapper.Init(Entity.DepCon, GetDbConstructor(dbConnection));
+
+            InitializeComponent();           
 
             //using (var db = new ProjectDbContext()) // 1 variant
             //{
@@ -96,7 +97,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             //using (var db = new ProjectDbContext())
             //{
             //    lstbox.ItemsSource = db.Students.ToList();
-            //}
+            //}           
             RefreshData();
         }            
 
