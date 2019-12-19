@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_0
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\App.xaml
-4710113041
+31844291023
 
-151624527421
+15-1259783862
 217165465328
-EditStudent.xaml;EditSubject.xaml;MainWindow.xaml;View\StudentsView.xaml;
+MainWindow.xaml;View\StudentsView.xaml;View\SubjectView.xaml;
 
 False
 

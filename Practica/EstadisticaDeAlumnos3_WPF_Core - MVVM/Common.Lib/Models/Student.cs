@@ -9,8 +9,7 @@ using System.Text;
 namespace Common.Lib.Models
 {
     public class Student : Entity
-    {
-        
+    {        
         public string Name { get; set; }
 
         public int ChairNumber { get; set; }
@@ -24,9 +23,7 @@ namespace Common.Lib.Models
         public SaveResult<Student> Delete()
         {
             return base.Delete<Student>();
-        }   
-    
-        
+        }               
 
         #region Static Validations
 

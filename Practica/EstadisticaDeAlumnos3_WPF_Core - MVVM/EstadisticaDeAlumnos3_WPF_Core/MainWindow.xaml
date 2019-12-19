@@ -6,33 +6,13 @@
         xmlns:local="clr-namespace:EstadisticaDeAlumnos3_WPF_Core"
         xmlns:controls="clr-namespace:EstadisticaDeAlumnos3_WPF_Core.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="Examenes" Height="450" Width="800" ResizeMode="NoResize">
     <TabControl x:Name="TabControl" SelectionChanged="TabControl_SelectionChanged">
         <TabItem Name ="Students" Header="Students">
             <controls:StudentsView></controls:StudentsView>
         </TabItem>
         <TabItem Name="Subjects" Header="Subjects" >
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="5*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Button Name="butt4" Grid.Row="0" Grid.Column="0" Content="Add" Click="butt4_Click" ></Button>
-                <Button Name="butt5" Grid.Row="0" Grid.Column="1" Content="Delete" Click="butt5_Click" ></Button>
-                <Button Name="butt6" Grid.Row="0" Grid.Column="2" Content="Update" Click="butt6_Click"  ></Button>
-                <ListView Name="lstbox_sb" x:FieldModifier="public" Grid.Row="1" Grid.ColumnSpan="3">
-                    <ListView.View>
-                        <GridView x:Name="gridViewSb">
-                            <GridViewColumn DisplayMemberBinding="{Binding Path=Name}">Name</GridViewColumn>                            
-                        </GridView>
-                    </ListView.View>
-                </ListView>
-            </Grid>
+            <controls:SubjectView></controls:SubjectView>
         </TabItem>
     </TabControl>
 </Window>

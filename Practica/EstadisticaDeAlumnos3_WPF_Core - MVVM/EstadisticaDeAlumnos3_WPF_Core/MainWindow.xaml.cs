@@ -45,21 +45,13 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             //{
             //    db.Database.Migrate();
             //}
-        }
-
-        public void RefreshData()
-        {
-            //var repo = Entity.DepCon.Resolve<IRepository<Student>>();
-
-            //lstbox.ItemsSource = repo.QueryAll().ToList();  
-            
-        }
+        }      
 
         public void RefreshData_sb()
         {
-            var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
+            //var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
 
-            lstbox_sb.ItemsSource = repo.QueryAll().ToList();
+            //lstbox_sb.ItemsSource = repo.QueryAll().ToList();
 
         }
 
@@ -74,49 +66,9 @@ namespace EstadisticaDeAlumnos3_WPF_Core
                 return new ProjectDbContext(optionsBuilder.Options);
             });
             return dbContextConst;
-        }
-
-        private void butt1_Click(object sender, RoutedEventArgs e)
-        {
-            EditStudent subWindow = new EditStudent();
-            subWindow.Owner = this;
-            subWindow.Show();           
-
-            //using (var db = new ProjectDbContext())
-            //{
-            //    Student item = new Student { Name = "Evgenii", Dni = "123" };
-            //    db.Students.Add(item);
-            //    db.SaveChanges();
-            //    lstbox.ItemsSource = db.Students.ToList();
-            //}
-        }
-
-        private void Window_Loaded(object sender, RoutedEventArgs e)
-        {
-
-            //using (var db = new ProjectDbContext())
-            //{
-            //    lstbox.ItemsSource = db.Students.ToList();
-            //}           
-            RefreshData();
         }            
 
-        private void butt2_Click(object sender, RoutedEventArgs e)
-        {
-            //var selectItem = (Student)lstbox.SelectedValue;
-
-            //selectItem.Delete();
-
-            //RefreshData();
-        }
-
-        private void butt3_Click(object sender, RoutedEventArgs e)
-        {
-            //var selectItem = (Student)lstbox.SelectedValue;
-            //EditStudent subWindow = new EditStudent(selectItem);
-            //subWindow.Owner = this;
-            //subWindow.Show();
-        }
+ 
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -138,31 +90,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             //if (MyTabItem3 != null && MyTabItem3.IsSelected)
             //        // do your staff
         }
-
-        private void butt4_Click(object sender, RoutedEventArgs e)
-        {
-            EditSubject subWindow = new EditSubject();
-            subWindow.Owner = this;
-            subWindow.Show();
-        }
-
-        private void butt5_Click(object sender, RoutedEventArgs e)
-        {
-            var selectItem = (Subject)lstbox_sb.SelectedValue;
-            if (selectItem != null)
-            {
-                selectItem.Delete();
-                RefreshData_sb();
-            }
-        }    
-
-        private void butt6_Click(object sender, RoutedEventArgs e)
-        {
-            var selectItem = (Subject)lstbox_sb.SelectedValue;
-            EditSubject subWindow = new EditSubject(selectItem);
-            subWindow.Owner = this;
-            subWindow.Show();
-        }
+       
         
     }
 }
