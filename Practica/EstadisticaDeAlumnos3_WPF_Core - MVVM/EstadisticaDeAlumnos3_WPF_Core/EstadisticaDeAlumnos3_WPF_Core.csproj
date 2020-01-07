@@ -8,6 +8,20 @@
 
   <ItemGroup>
     <Compile Remove="EditStudent.xaml.cs" />
+    <Compile Remove="Migrations\20200107084650_Third.cs" />
+    <Compile Remove="Migrations\20200107084650_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107085547_Third.cs" />
+    <Compile Remove="Migrations\20200107085547_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107092056_Third.cs" />
+    <Compile Remove="Migrations\20200107092056_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107092719_Third.cs" />
+    <Compile Remove="Migrations\20200107092719_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107092941_Third.cs" />
+    <Compile Remove="Migrations\20200107092941_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107093239_Third.cs" />
+    <Compile Remove="Migrations\20200107093239_Third.Designer.cs" />
+    <Compile Remove="Migrations\20200107120037_Third.cs" />
+    <Compile Remove="Migrations\20200107120037_Third.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

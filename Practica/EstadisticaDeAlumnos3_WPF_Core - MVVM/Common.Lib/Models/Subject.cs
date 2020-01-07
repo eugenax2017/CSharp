@@ -10,6 +10,9 @@ namespace Common.Lib.Models
     {
         public string Name { get; set; }
 
+        //Foreign key for Examen
+        public ICollection<Examen> Examens { get; set; }
+
         public SaveResult<Subject> Save()
         {
             return base.Save<Subject>();

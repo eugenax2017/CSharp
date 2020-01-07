@@ -45,15 +45,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core
             //{
             //    db.Database.Migrate();
             //}
-        }      
-
-        public void RefreshData_sb()
-        {
-            //var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
-
-            //lstbox_sb.ItemsSource = repo.QueryAll().ToList();
-
-        }
+        }        
 
         private static Func<ProjectDbContext> GetDbConstructor(string dbConnection)
         {
@@ -72,16 +64,16 @@ namespace EstadisticaDeAlumnos3_WPF_Core
 
         private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.OriginalSource is TabControl)
-            {
-                TabControl tab = sender as TabControl;
-                if (tab != null)
-                {
-                    TabItem tabItem = tab.SelectedValue as TabItem;
-                    if (tabItem.Name == "Subjects")
-                        RefreshData_sb();
-                }
-            }           
+            //if (e.OriginalSource is TabControl)
+            //{
+            //    TabControl tab = sender as TabControl;
+            //    if (tab != null)
+            //    {
+            //        TabItem tabItem = tab.SelectedValue as TabItem;
+            //        if (tabItem.Name == "Subjects")
+            //            RefreshData_sb();
+            //    }
+            //}           
             
             //if (MyTabItem1 != null && MyTabItem1.IsSelected)
             //    // do your staff

@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:EstadisticaDeAlumnos3_WPF_Core.View"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid>        
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="6*"></RowDefinition>
@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <WrapPanel Name="wp1" Margin="3" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center">
             <Label Content="_Name:" Target="{Binding ElementName=txtName}" Width="50" />
-            <TextBox VerticalAlignment="Center" Name="txtName" Text="{Binding SelectedSubject.Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>            
+            <TextBox VerticalAlignment="Center" Name="txtName" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>            
         </WrapPanel>        
         <Grid Margin="3" Grid.Row="0" Grid.Column="2">
             <Grid.ColumnDefinitions>
@@ -29,8 +29,8 @@
             <Button Name="butt1" Content="Add" Command="{Binding AddSubjectCommand}" Grid.Column="0" IsEnabled="{Binding Path=Enable_N}"></Button>
             <Button Name="butt_updt" Content="Update" Command="{Binding UpdateSubjectCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
             <Button Name="butt_clear" Content="Clear" Command="{Binding ClearSubjectCommand}" Grid.Column="2"></Button>
-        </Grid>
-        <DataGrid IsReadOnly="True" SelectionMode="Single" SelectedValue="{Binding Path=SelectedSubject, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Name="lstbox_sb" x:FieldModifier="public" ItemsSource="{Binding Subjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
+        </Grid>        
+        <DataGrid IsReadOnly="True" SelectionMode="Single" SelectedValue="{Binding Path=SelectedSubject, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" AutoGenerateColumns="False" Name="lstbox_sb" x:FieldModifier="public" ItemsSource="{Binding Subjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">            
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="7*" />
                 <DataGridTemplateColumn Width="*">

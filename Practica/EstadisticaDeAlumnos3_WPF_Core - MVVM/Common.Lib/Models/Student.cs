@@ -13,7 +13,10 @@ namespace Common.Lib.Models
         public string Name { get; set; }
 
         public int ChairNumber { get; set; }
-        public string Dni { get; set; }        
+        public string Dni { get; set; }
+
+        //Foreign key for Examen
+        public virtual ICollection<Examen> Examens { get; set; }
 
         public SaveResult<Student> Save()
         {

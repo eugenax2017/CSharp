@@ -1,6 +1,5 @@
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\bin\Debug\netstandard2.0\Common.Lib.deps.json
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\bin\Debug\netstandard2.0\Common.Lib.dll
-C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\obj\Debug\netstandard2.0\Common.Lib.csprojAssemblyReference.cache
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\obj\Debug\netstandard2.0\Common.Lib.AssemblyInfoInputs.cache
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\obj\Debug\netstandard2.0\Common.Lib.AssemblyInfo.cs
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF\Project.Lib\bin\Debug\netstandard2.0\Common.Lib.pdb

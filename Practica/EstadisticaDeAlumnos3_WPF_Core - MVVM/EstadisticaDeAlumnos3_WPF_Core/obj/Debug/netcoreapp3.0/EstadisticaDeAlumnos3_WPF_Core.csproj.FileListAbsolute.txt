@@ -135,3 +135,5 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\GeneratedInternalTypeHelper.g.cs
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\SubjectView.g.cs
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\SubjectView.baml
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\ExamensView.g.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core - MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\ExamensView.baml
