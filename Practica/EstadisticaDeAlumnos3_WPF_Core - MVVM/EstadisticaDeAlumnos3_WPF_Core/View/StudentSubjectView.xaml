@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="EstadisticaDeAlumnos3_WPF_Core.View.ExamensView"
+﻿<UserControl x:Class="EstadisticaDeAlumnos3_WPF_Core.View.StudentSubjectView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -17,14 +17,10 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
         <WrapPanel Name="wp1" Margin="3" Grid.Row="0" Grid.Column="0">
-            <Label Content="_Name:" Target="{Binding ElementName=txtName}" Width="50" />
-            <TextBox VerticalAlignment="Center" Name="txtName" Text="{Binding Name, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>
-            <Label Content="_DNI:" Target="{Binding ElementName=txtDni}" Width="50" />
-            <TextBox Name="txtDni" VerticalAlignment="Center" Text="{Binding Dni, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193" />
-        </WrapPanel>
-        <WrapPanel Name="wp2" Margin="3" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
-            <Label Content="_Chair:" Target="{Binding ElementName=txtChair}" Width="50" />
-            <TextBox Name="txtChair" VerticalAlignment="Center" Text="{Binding ChairNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="193"/>
+            <Label Content="_Student:" Target="{Binding ElementName=txtStudent}" Width="50" />
+            <TextBox VerticalAlignment="Center" Name="txtStudent" Text="{Binding StudentDni, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>
+            <Label Content="_Subject:" Target="{Binding ElementName=txtSubject}" Width="50" />
+            <TextBox Name="txtSubject" VerticalAlignment="Center" Text="{Binding SubjectName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193" />
         </WrapPanel>
         <Grid Margin="3" Grid.Row="0" Grid.Column="2">
             <Grid.ColumnDefinitions>
@@ -36,11 +32,11 @@
             <Button Name="butt_updt" Content="Update" Command="{Binding UpdateStudentCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
             <Button Name="butt_clear" Content="Clear" Command="{Binding ClearStudentCommand}" Grid.Column="2"></Button>
         </Grid>
-        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedStudent, Mode=TwoWay}" AutoGenerateColumns="False" Name="lstbox" x:FieldModifier="public" ItemsSource="{Binding Students, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
+        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedStudent, Mode=TwoWay}" AutoGenerateColumns="False" Name="lstbox" x:FieldModifier="public" ItemsSource="{Binding StudentSubjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="4*" />
-                <DataGridTextColumn Header="Dni" Binding="{Binding Path=Dni}" Width="4*" />
-                <DataGridTextColumn Header="Chair" Binding="{Binding Path=ChairNumber}" Width="3*">
+                <DataGridTextColumn Header="Name" Binding="{Binding Path=StudentID}" Width="4*" />
+                <DataGridTextColumn Header="Dni" Binding="{Binding Path=Student.Name}" Width="4*" />
+                <DataGridTextColumn Header="Subject" Binding="{Binding Path=SubjectID}" Width="3*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Right" />
@@ -50,14 +46,14 @@
                 <DataGridTemplateColumn Width="1.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentsView}}, Path=DataContext.EditStudentCommand}"></Button>
+                            <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentSubjectView}}, Path=DataContext.EditStudentCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Width="1.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentsView}}, Path=DataContext.DeleteStudentCommand}"></Button>
+                            <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentSubjectView}}, Path=DataContext.DeleteStudentCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

@@ -19,7 +19,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Context
         }
         public DbSet<Student> Students { get; set; }
         public DbSet<Subject> Subjects { get; set; }
-        public DbSet<Examen> Examens { get; set; }
+        public DbSet<StudentSubject> StudentSubjects { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // 1 variant
         {
@@ -33,20 +33,30 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Context
             builder.Entity<Entity>()
                 .Ignore(x => x.CurrentValidation);
 
-            builder.Entity<Examen>()
-                .Property(e => e.Date)
-                .HasColumnType("date");
+            //builder.Entity<Examen>()
+            //    .Property(e => e.Date)
+            //    .HasColumnType("date");
 
             //builder.Entity<Examen>()
             //    .HasKey(e => new { e.Id, e.Date, e.StudentID, e.SubjectID });
-            builder.Entity<Examen>()
-                .HasOne(e => e.Student)
-                .WithMany(e => e.Examens)
-                .HasForeignKey(e => e.StudentID);
-            builder.Entity<Examen>()
-                .HasOne(e => e.Subject)
-                .WithMany(e => e.Examens)
-                .HasForeignKey(e => e.SubjectID);
+            //builder.Entity<Examen>()
+            //    .HasOne(e => e.Student)
+            //    .WithMany(e => e.Examens)
+            //    .HasForeignKey(e => e.StudentID);
+            //builder.Entity<Examen>()
+            //    .HasOne(e => e.Subject)
+            //    .WithMany(e => e.Examens)
+            //    .HasForeignKey(e => e.SubjectID);
+            //builder.Entity<StudentSubject>()
+            //    .HasKey(bc => new { bc.StudentId, bc.SubjectId });
+            builder.Entity<StudentSubject>()
+                .HasOne(bc => bc.Student)
+                .WithMany(b => b.StudentSubject)
+                .HasForeignKey(bc => bc.StudentId);
+            builder.Entity<StudentSubject>()
+                .HasOne(bc => bc.Subject)
+                .WithMany(c => c.StudentSubject)
+                .HasForeignKey(bc => bc.SubjectId);
         }
     }
 }

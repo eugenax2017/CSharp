@@ -16,7 +16,14 @@ namespace Common.Lib.Models
         public string Dni { get; set; }
 
         //Foreign key for Examen
-        public virtual ICollection<Examen> Examens { get; set; }
+        public virtual ICollection<StudentSubject> StudentSubject
+        {
+            get
+            {
+                var repo = DepCon.Resolve<StudentSubject>();
+                return repo.QueryAll().Where();
+            }
+        }
 
         public SaveResult<Student> Save()
         {

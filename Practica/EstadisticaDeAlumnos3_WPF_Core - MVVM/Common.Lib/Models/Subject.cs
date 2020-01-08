@@ -11,7 +11,7 @@ namespace Common.Lib.Models
         public string Name { get; set; }
 
         //Foreign key for Examen
-        public ICollection<Examen> Examens { get; set; }
+        public virtual ICollection<StudentSubject> StudentSubject { get; set; }
 
         public SaveResult<Subject> Save()
         {

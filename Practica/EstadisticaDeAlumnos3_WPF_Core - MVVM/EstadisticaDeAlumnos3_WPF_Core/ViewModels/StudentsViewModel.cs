@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
 {
-    public class ExamensViewModel : ViewModelBase
+    public class StudentsViewModel : ViewModelBase
     {
         private Student selectedStudent;
         public Student SelectedStudent
@@ -111,7 +111,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
                 OnPropertyChanged();
             }
         }
-        public ExamensViewModel()
+        public StudentsViewModel()
         {
             AddStudentCommand = new RouteCommand(AddStudent);
             GetStudentsCommand = new RouteCommand(GetStudents);

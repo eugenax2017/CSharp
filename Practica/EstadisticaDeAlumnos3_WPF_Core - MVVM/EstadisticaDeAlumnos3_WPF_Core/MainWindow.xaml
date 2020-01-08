@@ -14,5 +14,9 @@
         <TabItem Name="Subjects" Header="Subjects" >
             <controls:SubjectView></controls:SubjectView>
         </TabItem>
+        <TabItem Name="StudentSubject" Header="StudentSubject" >
+            <controls:StudentSubjectView></controls:StudentSubjectView>
+        </TabItem>
+        
     </TabControl>
 </Window>

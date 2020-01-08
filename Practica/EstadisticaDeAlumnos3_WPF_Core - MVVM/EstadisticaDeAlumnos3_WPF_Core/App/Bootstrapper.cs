@@ -33,14 +33,14 @@ namespace EstadisticaDeAlumnos3_WPF_Core
                 return new GenericRepository<Subject>(dbContextConst());
             });
 
-            var examensRepoBuilder = new Func<object[], object>((parameters) =>
+            var studentSubjectRepoBuilder = new Func<object[], object>((parameters) =>
             {
-                return new GenericRepository<Examen>(dbContextConst());
+                return new GenericRepository<StudentSubject>(dbContextConst());
             });
 
             dp.Register<IRepository<Student>, GenericRepository<Student>>(studentRepoBuilder);
             dp.Register<IRepository<Subject>, GenericRepository<Subject>>(subjectsRepoBuilder);
-            dp.Register<IRepository<Examen>, GenericRepository<Examen>>(examensRepoBuilder);
+            dp.Register<IRepository<StudentSubject>, GenericRepository<StudentSubject>>(studentSubjectRepoBuilder);
             //dp.Register<IRepository<Subject>, SubjectsRepository>(subjectsRepoBuilder);
             //dp.Register<ISubjectsRepository, SubjectsRepository>(subjectsRepoBuilder);
         }

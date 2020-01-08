@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EstadisticaDeAlumnos3_WPF_Core.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -14,13 +15,15 @@ using System.Windows.Shapes;
 namespace EstadisticaDeAlumnos3_WPF_Core.View
 {
     /// <summary>
-    /// Interaction logic for ExamensView.xaml
+    /// Interaction logic for StudentSubjectView.xaml
     /// </summary>
-    public partial class ExamensView : UserControl
+    public partial class StudentSubjectView : UserControl
     {
-        public ExamensView()
+        public StudentSubjectView()
         {
             InitializeComponent();
+            var vm = new StudentSubjectViewModel();
+            this.DataContext = vm;
         }
     }
 }

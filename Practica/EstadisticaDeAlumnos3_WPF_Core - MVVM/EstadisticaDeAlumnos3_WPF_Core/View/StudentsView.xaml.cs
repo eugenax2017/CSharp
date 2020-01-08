@@ -28,7 +28,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.View
         {
             InitializeComponent();
 
-            var vm = new ExamensViewModel();
+            var vm = new StudentsViewModel();
             this.DataContext = vm;
             
         }  
