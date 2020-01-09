@@ -21,11 +21,11 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Context
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<StudentSubject> StudentSubjects { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // 1 variant
-        {
-            optionsBuilder.UseSqlite("Data Source = C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\EstadisticaDeAlumnos3_WPF_Core_MVVM\\EstadisticaDeAlumnos3_WPF_Core\\bin\\Debug\\netcoreapp3.0\\Test2.db");
-            base.OnConfiguring(optionsBuilder);           
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // 1 variant
+        //{
+        //    optionsBuilder.UseSqlite("Data Source = C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\EstadisticaDeAlumnos3_WPF_Core_MVVM\\EstadisticaDeAlumnos3_WPF_Core\\bin\\Debug\\netcoreapp3.0\\Test2.db");
+        //    base.OnConfiguring(optionsBuilder);           
+        //}
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);

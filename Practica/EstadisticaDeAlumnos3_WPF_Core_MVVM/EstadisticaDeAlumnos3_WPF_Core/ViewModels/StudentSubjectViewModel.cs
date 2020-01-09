@@ -90,7 +90,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
             StudentSubject newStudent = new StudentSubject { StudentId = stud.Id, SubjectId = subj.Id};           
             var res_save = newStudent.Save();
             stud.StudentSubject.Add(newStudent);
-            var res_save1 = stud.Save();
+            var res_save1 = stud.Save();            
             if (res_save.IsSuccess && res_save1.IsSuccess) 
                 GetStudentSubjects();
         }

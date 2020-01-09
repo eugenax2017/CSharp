@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EstadisticaDeAlumnos3_WPF_Core.Migrations
 {
     [DbContext(typeof(ProjectDbContext))]
-    [Migration("20200109095347_First")]
-    partial class First
+    [Migration("20200109113311_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -88,7 +88,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Migrations
                         .IsRequired();
 
                     b.HasOne("Common.Lib.Models.Subject", "Subject")
-                        .WithMany("StudentSubject")
+                        .WithMany("StudentSubjects")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

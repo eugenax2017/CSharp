@@ -34,12 +34,12 @@
         </Grid>
         <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedStudentSubject, Mode=TwoWay}" AutoGenerateColumns="False" Name="lstbox2" x:FieldModifier="public" ItemsSource="{Binding StudentSubjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding StudentId}" Width="4*" />
-                <DataGridTextColumn Header="Dni" Binding="{Binding Path=Student.Name}" Width="4*" />
-                <DataGridTextColumn Header="Subject" Binding="{Binding SubjectId}" Width="3*">
+                <DataGridTextColumn Header="Name" Binding="{Binding Path = Student.Name}" Width="4*" />
+                <DataGridTextColumn Header="Dni" Binding="{Binding Path = Student.Dni}" Width="4*" />
+                <DataGridTextColumn Header="Subject" Binding="{Binding Path = Subject.Name}" Width="3*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
-                            <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="HorizontalAlignment" Value="Left" />
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>

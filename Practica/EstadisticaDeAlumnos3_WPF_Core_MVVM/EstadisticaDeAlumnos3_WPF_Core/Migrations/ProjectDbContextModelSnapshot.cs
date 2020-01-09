@@ -86,7 +86,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.Migrations
                         .IsRequired();
 
                     b.HasOne("Common.Lib.Models.Subject", "Subject")
-                        .WithMany("StudentSubject")
+                        .WithMany("StudentSubjects")
                         .HasForeignKey("SubjectId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
