@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder1\**" />
+    <EmbeddedResource Remove="NewFolder1\**" />
+    <None Remove="NewFolder1\**" />
+    <Page Remove="NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Remove="EditStudent.xaml.cs" />
     <Compile Remove="Migrations\20200107084650_Third.cs" />
     <Compile Remove="Migrations\20200107084650_Third.Designer.cs" />
@@ -53,6 +60,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Common.Lib\Common.Lib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Windows\" />
   </ItemGroup>
 
 </Project>

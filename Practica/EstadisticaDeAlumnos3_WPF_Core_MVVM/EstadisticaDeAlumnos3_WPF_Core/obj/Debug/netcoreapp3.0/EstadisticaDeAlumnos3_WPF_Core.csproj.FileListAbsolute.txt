@@ -208,3 +208,5 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core_MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.csproj.CopyComplete
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core_MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.dll
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core_MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\EstadisticaDeAlumnos3_WPF_Core.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core_MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\StudentSubjectNewView.g.cs
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\EstadisticaDeAlumnos3_WPF_Core_MVVM\EstadisticaDeAlumnos3_WPF_Core\obj\Debug\netcoreapp3.0\View\StudentSubjectNewView.baml
