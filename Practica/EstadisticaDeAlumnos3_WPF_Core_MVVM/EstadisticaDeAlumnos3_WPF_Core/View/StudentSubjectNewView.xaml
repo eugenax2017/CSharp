@@ -30,19 +30,32 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <Button Name="butt1" Content="Add" Command="{Binding AddStudentSubjectCommand}" Grid.Column="0" IsEnabled="{Binding Path=Enable_N}"></Button>
-            <Button Name="butt_updt" Content="Update" Command="{Binding UpdateStudentCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
-            <Button Name="butt_clear" Content="Clear" Command="{Binding ClearStudentCommand}" Grid.Column="2"></Button>
+            <Button Name="butt_updt" Content="Update" Command="{Binding UpdateStudentSubjectCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
+            <Button Name="butt_clear" Content="Clear" Command="{Binding DeleteStudentSubjectCommand}" Grid.Column="2"></Button>
         </Grid>
         <DataGrid IsReadOnly="True" 
-                  SelectedItem="{Binding Path=SelectedStudentSubject, Mode=TwoWay}"                    
+                  SelectedItem="{Binding Path=SelectedStudentSubject, Mode=TwoWay}" 
+                  AutoGenerateColumns="False"
                   Name="dtgridSSNV" x:FieldModifier="public" 
                   ItemsSource="{Binding SubjectsByStudent, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                   Margin="5" 
-                  Grid.Row="1" Grid.ColumnSpan="3">
+                  Grid.Row="1" Grid.ColumnSpan="2">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Path = Subject.Name}" Header="Name" />
+                <DataGridTextColumn Binding="{Binding Path = Name}" Header="Name" />
             </DataGrid.Columns>
                        
+        </DataGrid>
+        <DataGrid IsReadOnly="True" 
+                  SelectedItem="{Binding Path=SelectedSubject, Mode=TwoWay}"                    
+                  AutoGenerateColumns="False"
+                  Name="dtgridSSNV2" x:FieldModifier="public" 
+                  ItemsSource="{Binding Subjects, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                  Margin="5" 
+                  Grid.Row="1" Grid.Column="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path = Name}" Header="Name" />
+            </DataGrid.Columns>
+
         </DataGrid>
     </Grid>
 </UserControl>

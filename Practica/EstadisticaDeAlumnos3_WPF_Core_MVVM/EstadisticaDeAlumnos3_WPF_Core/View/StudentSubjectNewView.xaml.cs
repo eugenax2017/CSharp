@@ -25,6 +25,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.View
             var vm = new StudentSubjectNewViewModel();
             this.DataContext = vm;
         }
-       
+
+        
     }
 }

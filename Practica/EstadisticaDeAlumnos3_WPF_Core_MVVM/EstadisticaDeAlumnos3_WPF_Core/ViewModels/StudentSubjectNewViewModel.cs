@@ -12,6 +12,34 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
 {
     public class StudentSubjectNewViewModel : ViewModelBase
     {
+        private Subject selectedSubject;
+
+        public Subject SelectedSubject
+        {
+            get
+            {
+                return selectedSubject;
+            }
+            set
+            {
+                selectedSubject = value;               
+                OnPropertyChanged();
+            }
+        }
+        private Subject selectedStudentSubject;
+
+        public Subject SelectedStudentSubject
+        {
+            get
+            {
+                return selectedStudentSubject;
+            }
+            set
+            {
+                selectedStudentSubject = value;
+                OnPropertyChanged();
+            }
+        }
         private string dniEntry;
 
         public string DniEntry
@@ -25,8 +53,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
                 dniEntry = value;
                 if (!string.IsNullOrEmpty(dniEntry))
                 {
-                    var repo = Entity.DepCon.Resolve<IRepository<StudentSubject>>();
-                    SubjectsByStudent = repo.QueryAll().Where(x => x.Student.Dni == dniEntry).Select(x => x.Subject).ToList();
+                    GetSubjectsByStudent();
                 }    
                 OnPropertyChanged();
             }
@@ -36,8 +63,8 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
         public List<Subject> SubjectsByStudent
         {
             get
-            {                
-                return subjectsByStudent;
+            {
+                return subjectsByStudent;                                
             }
             set
             {
@@ -46,6 +73,19 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
             }
         }
 
+        private List<Subject> subjects;
+        public List<Subject> Subjects
+        {
+            get
+            {
+                return subjects;
+            }
+            set
+            {
+                subjects = value;
+                OnPropertyChanged();
+            }
+        }
 
         private List<Student> _students;
         public List<Student> Students { 
@@ -64,13 +104,54 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
 
         public StudentSubjectNewViewModel()
         {
-
             AddStudentSubjectCommand = new RouteCommand(AddStudentSubject);
-            GetStudents();
-        }      
-        
+            DeleteStudentSubjectCommand = new RouteCommand(DeleteStudentSubject);
+            UpdateStudentSubjectCommand = new RouteCommand(UpdateStudentSubject);
+            UpdateStudentSubject();
+        }              
         public void AddStudentSubject()
         {
+            if (SelectedSubject != null)
+            {
+                if (!string.IsNullOrEmpty(dniEntry))
+                {
+                    var repo = Entity.DepCon.Resolve<IRepository<Student>>();
+                    var stud = repo.QueryAll().Where(x => x.Dni == dniEntry).FirstOrDefault();
+                    StudentSubject newStudent = new StudentSubject { StudentId = stud.Id, SubjectId = SelectedSubject.Id };
+                    var res_save = newStudent.Save();
+                    if (res_save.IsSuccess)
+                    {
+                        if (!string.IsNullOrEmpty(dniEntry))
+                        {
+                            GetSubjectsByStudent();
+                        }
+                    }
+                        
+                }                
+            }
+        }
+        public void DeleteStudentSubject()
+        {
+            if (!string.IsNullOrEmpty(dniEntry))
+            {
+                if (SelectedStudentSubject != null)
+                {
+                    var repo = Entity.DepCon.Resolve<IRepository<StudentSubject>>();
+                    var element = repo.QueryAll().Where(x => (x.Student.Dni == dniEntry && x.SubjectId == SelectedStudentSubject.Id)).FirstOrDefault();
+                    if (element != null)
+                    {
+                        element.Delete();
+                        GetSubjectsByStudent();
+                    }                                    
+                }
+            }
+        }
+        public void UpdateStudentSubject()
+        {
+            var current = DniEntry;
+            GetStudents();
+            GetSubjects();
+            DniEntry = current;
 
         }
         public void GetStudents()
@@ -79,14 +160,28 @@ namespace EstadisticaDeAlumnos3_WPF_Core.ViewModels
 
             Students = repo.QueryAll().ToList();
         }
+        public void GetSubjects()
+        {
+            var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
+
+            Subjects = repo.QueryAll().ToList();
+        }
+
+        public void GetSubjectsByStudent()
+        {
+            var repo = Entity.DepCon.Resolve<IRepository<StudentSubject>>();
+
+            SubjectsByStudent = repo.QueryAll().Where(x => x.Student.Dni == dniEntry).Select(x => x.Subject).ToList();
+        }
+
 
         #region Commands
         public ICommand AddStudentSubjectCommand { get; set; }
         public ICommand GetStudentsCommand { get; set; }
         public ICommand DeleteStudentSubjectCommand { get; set; }
         public ICommand EditStudentCommand { get; set; }
-        public ICommand ClearStudentCommand { get; set; }
-        public ICommand UpdateStudentCommand { get; set; }
+        //public ICommand ClearStudentCommand { get; set; }
+        public ICommand UpdateStudentSubjectCommand { get; set; }
         #endregion
 
     }
