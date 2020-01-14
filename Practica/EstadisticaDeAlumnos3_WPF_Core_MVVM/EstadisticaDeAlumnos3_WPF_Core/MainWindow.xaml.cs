@@ -26,6 +26,7 @@ namespace EstadisticaDeAlumnos3_WPF_Core
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// git clone https:///bitbucket.org/linkbub/trainingexample1_averagemarks.git
     public partial class MainWindow : Window
     {
         public MainWindow()
