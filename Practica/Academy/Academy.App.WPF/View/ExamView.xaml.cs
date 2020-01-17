@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Academy.App.WPF.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -21,6 +22,8 @@ namespace Academy.App.WPF.View
         public ExamView()
         {
             InitializeComponent();
+            var vm = new ExamViewModel();
+            this.DataContext = vm;
         }
     }
 }

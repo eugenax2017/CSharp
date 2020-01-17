@@ -18,13 +18,18 @@
         </Grid.ColumnDefinitions>
         <WrapPanel Name="wp1" Margin="3" Grid.Row="0" Grid.Column="0">
             <Label Content="_Data:" Target="{Binding ElementName=txtData}" Width="50" />
-            <TextBox VerticalAlignment="Center" Name="txtData" Text="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193"/>
+            <DatePicker SelectedDateFormat="Short" SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/mm/yyyy}"
+                  DisplayDateStart="1/01/20" DisplayDateEnd="12/31/20" Width="193"
+                  FirstDayOfWeek="Monday"/>            
             <Label Content="_Title:" Target="{Binding ElementName=txtTitle}" Width="50" />
             <TextBox Name="txtTitle" VerticalAlignment="Center" Text="{Binding Title, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Width="193" />
         </WrapPanel>
         <WrapPanel Name="wp2" Margin="3" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
             <Label Content="_Subject:" Target="{Binding ElementName=txtSubject}" Width="50" />
-            <TextBox Name="txtSubject" VerticalAlignment="Center" Text="{Binding Subject, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="193"/>
+            <ComboBox Name ="cmb_sbj" ItemsSource="{Binding Subjects}" MinWidth="180"
+                      HorizontalAlignment="Stretch" Margin="10,2,2,2"                        
+                      DisplayMemberPath="Name" SelectedValue="{Binding Path=SubjectEntry}" 
+            />
             <Label Content="_Text:" Target="{Binding ElementName=txtText}" Width="50" />
             <TextBox Name="txtText" VerticalAlignment="Center" Text="{Binding Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="193"/>
         </WrapPanel>
@@ -34,19 +39,19 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            <Button Name="butt1" Content="Add" Command="{Binding AddStudentCommand}" Grid.Column="0" IsEnabled="{Binding Path=Enable_N}"></Button>
-            <Button Name="butt_updt" Content="Update" Command="{Binding UpdateStudentCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
-            <Button Name="butt_clear" Content="Clear" Command="{Binding ClearStudentCommand}" Grid.Column="2"></Button>
+            <Button Name="butt1" Content="Add" Command="{Binding AddExamCommand}" Grid.Column="0" IsEnabled="{Binding Path=Enable_N}"></Button>
+            <Button Name="butt_updt" Content="Update" Command="{Binding UpdateExamCommand}" Grid.Column="1" IsEnabled="{Binding Path=Enable}"></Button>
+            <Button Name="butt_clear" Content="Clear" Command="{Binding ClearExamCommand}" Grid.Column="2"></Button>
         </Grid>
-        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedStudent, Mode=TwoWay}" 
+        <DataGrid IsReadOnly="True" SelectedItem="{Binding Path=SelectedExam, Mode=TwoWay}" 
                   AutoGenerateColumns="False" Name="lstbox" x:FieldModifier="public" 
-                  ItemsSource="{Binding Students, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
+                  ItemsSource="{Binding Exams, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" 
                   Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Name" Binding="{Binding Path=Name}" Width="4*" />
-                <DataGridTextColumn Header="Dni" Binding="{Binding Path=Dni}" Width="4*" />
-                <DataGridTextColumn Header="Email" Binding="{Binding Path=Email}" Width="4*" />
-                <DataGridTextColumn Header="Chair" Binding="{Binding Path=ChairNumber}" Width="3*">
+                <DataGridTextColumn Header="Date" Binding="{Binding Path=Date}" Width="4*" />
+                <DataGridTextColumn Header="Title" Binding="{Binding Path=Title}" Width="4*" />
+                <DataGridTextColumn Header="Subject" Binding="{Binding Path=Subject}" Width="4*" />
+                <DataGridTextColumn Header="Text" Binding="{Binding Path=Text}" Width="3*">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="TextBlock">
                             <Setter Property="HorizontalAlignment" Value="Right" />
@@ -56,14 +61,14 @@
                 <DataGridTemplateColumn Width="1.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentView}}, Path=DataContext.EditStudentCommand}"></Button>
+                            <Button Content="Edit" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ExamView}}, Path=DataContext.EditExamCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
                 <DataGridTemplateColumn Width="1.5*">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:StudentView}}, Path=DataContext.DeleteStudentCommand}"></Button>
+                            <Button Content="Delete" Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type local:ExamView}}, Path=DataContext.DeleteExamCommand}"></Button>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
