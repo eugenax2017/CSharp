@@ -18,7 +18,7 @@
         </Grid.ColumnDefinitions>
         <WrapPanel Name="wp1" Margin="3" Grid.Row="0" Grid.Column="0">
             <Label Content="_Data:" Target="{Binding ElementName=txtData}" Width="50" />
-            <DatePicker SelectedDateFormat="Short" SelectedDate="{Binding Data, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/mm/yyyy}"
+            <DatePicker SelectedDateFormat="Short" SelectedDate="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, StringFormat=dd/mm/yyyy}"
                   DisplayDateStart="1/01/20" DisplayDateEnd="12/31/20" Width="193"
                   FirstDayOfWeek="Monday"/>            
             <Label Content="_Title:" Target="{Binding ElementName=txtTitle}" Width="50" />

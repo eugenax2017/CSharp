@@ -113,8 +113,9 @@ namespace Academy.App.WPF.ViewModel
             if (SubjectEntry != null)
             {
                 if (Date != null)
-                {                    
-                    Exam newExam = new Exam { Title = Title, Date = Date, Text = Text,  Subject = SubjectEntry, SubjectId = SubjectEntry.Id};
+                {
+                    //Exam newExam = new Exam { Title = Title, Date = Date, Text = Text,  Subject = SubjectEntry, SubjectId = SubjectEntry.Id};
+                    Exam newExam = new Exam { Title = Title, Date = Date, Text = Text, SubjectId = SubjectEntry.Id };
                     var res_save = newExam.Save();
                     if (res_save.IsSuccess)
                     {

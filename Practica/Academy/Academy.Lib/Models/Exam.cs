@@ -1,6 +1,8 @@
 ﻿using Common.Lib.Core;
+using Common.Lib.Core.Context;
 using Common.Lib.Infrastructure;
 using System;
+using System.Linq;
 
 namespace Academy.Lib.Models
 {
@@ -12,7 +14,19 @@ namespace Academy.Lib.Models
 
         public DateTime Date { get; set; }
 
-        public Subject Subject { get; set; }
+        private Subject subject;
+        public Subject Subject
+        {
+            get
+            {
+                var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
+                return repo.QueryAll().Where(x => x.Id == this.SubjectId).FirstOrDefault();
+            }
+            set
+            {
+                subject = value;
+            }
+        }
 
         public Guid SubjectId { get; set; }
 
