@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -43,15 +43,19 @@ namespace WebApplication_New
                 app.UseHsts(); //add
             }
 
-            app.UseHttpsRedirection(); //add
-
+            app.UseHttpsRedirection(); //add            
+            //app.UseDirectoryBrowser(); //let you see the content of the main directory
             app.UseDefaultFiles(); //add
             app.UseStaticFiles(); //add
 
             app.UseRouting();
 
-            app.UseAuthorization();    //add        
+            app.UseAuthorization(); //add        
 
+            //app.Run(async (context) =>
+            //{
+            //    await context.Response.WriteAsync("Hello World");
+            //});
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

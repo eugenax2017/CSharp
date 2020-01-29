@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\formacio\\Desktop\\Evgenii\\training_netexcercices\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj": {}
+    "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj": {}
   },
   "projects": {
-    "C:\\Users\\formacio\\Desktop\\Evgenii\\training_netexcercices\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj": {
+    "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\training_netexcercices\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj",
+        "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj",
         "projectName": "DemoSuperGuay",
-        "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\training_netexcercices\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj",
+        "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\DemoSuperGuay.csproj",
         "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\training_netexcercices\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\obj\\",
+        "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\MasterClassFullStackDotNetAngularjs\\DemoSuperGuay\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -654,11 +654,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj",
+      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj",
       "projectName": "Academy.Lib.DAL",
-      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj",
+      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj",
       "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib.DAL\\obj\\",
+      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -677,8 +677,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj": {
-              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj"
+            "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj": {
+              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj"
             }
           }
         }

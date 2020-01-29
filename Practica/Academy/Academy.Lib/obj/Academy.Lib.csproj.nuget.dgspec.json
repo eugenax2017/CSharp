@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\formacio\\Desktop\\Evgenii\\Academy\\Ejemplos Patrones\\5 WPF con EF Repos Dependency Injection\\Academy\\Academy.Lib\\Academy.Lib.csproj": {}
+    "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\Academy\\Academy.Lib\\Academy.Lib.csproj": {}
   },
   "projects": {
-    "C:\\Users\\formacio\\Desktop\\Evgenii\\Academy\\Ejemplos Patrones\\5 WPF con EF Repos Dependency Injection\\Academy\\Academy.Lib\\Academy.Lib.csproj": {
+    "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\Academy\\Academy.Lib\\Academy.Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\Academy\\Ejemplos Patrones\\5 WPF con EF Repos Dependency Injection\\Academy\\Academy.Lib\\Academy.Lib.csproj",
+        "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\Academy\\Academy.Lib\\Academy.Lib.csproj",
         "projectName": "Academy.Lib",
-        "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\Academy\\Ejemplos Patrones\\5 WPF con EF Repos Dependency Injection\\Academy\\Academy.Lib\\Academy.Lib.csproj",
+        "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\Academy\\Academy.Lib\\Academy.Lib.csproj",
         "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\Academy\\Ejemplos Patrones\\5 WPF con EF Repos Dependency Injection\\Academy\\Academy.Lib\\obj\\",
+        "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\Academy\\Academy.Lib\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

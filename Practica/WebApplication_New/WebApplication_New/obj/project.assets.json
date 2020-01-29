@@ -7080,11 +7080,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\WebApplication_New\\WebApplication_New.csproj",
+      "projectUniqueName": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\WebApplication_New\\WebApplication_New.csproj",
       "projectName": "WebApplication_New",
-      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\WebApplication_New\\WebApplication_New.csproj",
+      "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\WebApplication_New\\WebApplication_New.csproj",
       "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\WebApplication_New\\obj\\",
+      "outputPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\WebApplication_New\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7103,11 +7103,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj": {
-              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj"
+            "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj": {
+              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib.DAL\\Academy.Lib.DAL.csproj"
             },
-            "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj": {
-              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj"
+            "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj": {
+              "projectPath": "C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\Academy.Lib\\Academy.Lib.csproj"
             }
           }
         }

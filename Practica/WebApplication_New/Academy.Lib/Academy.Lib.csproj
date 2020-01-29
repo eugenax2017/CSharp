@@ -9,13 +9,13 @@
 
   <ItemGroup>
     <Reference Include="Common.Lib">
-      <HintPath>..\..\Academy\Ejemplos Patrones\5 WPF con EF Repos Dependency Injection\Academy\Academy.Lib\bin\Debug\netstandard2.0\Common.Lib.dll</HintPath>
+      <HintPath>..\..\..\..\trainingexample1_averagemarks\Ejemplos Patrones\0 Core\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.dll</HintPath>
     </Reference>
     <Reference Include="Common.Lib.Client">
-      <HintPath>..\..\Academy\Ejemplos Patrones\5 WPF con EF Repos Dependency Injection\Academy\Academy.Lib\bin\Debug\netstandard2.0\Common.Lib.Client.dll</HintPath>
+      <HintPath>..\..\..\..\trainingexample1_averagemarks\Ejemplos Patrones\0 Core\Common.Lib.Client\bin\Debug\netstandard2.0\Common.Lib.Client.dll</HintPath>
     </Reference>
     <Reference Include="Common.Lib.DAL.EFCore">
-      <HintPath>..\..\Academy\Ejemplos Patrones\5 WPF con EF Repos Dependency Injection\Academy\Academy.Lib\bin\Debug\netstandard2.0\Common.Lib.DAL.EFCore.dll</HintPath>
+      <HintPath>..\..\..\..\trainingexample1_averagemarks\Ejemplos Patrones\0 Core\Common.Lib.DAL.EFCore\bin\Debug\netstandard2.0\Common.Lib.DAL.EFCore.dll</HintPath>
     </Reference>
   </ItemGroup>
 
