@@ -48,8 +48,7 @@
             {
                 console.log("POST-ing of data failed");
             }
-        );
-
+        );       
 
     }
 }

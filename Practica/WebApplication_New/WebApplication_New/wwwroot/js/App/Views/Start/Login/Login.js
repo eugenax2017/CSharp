@@ -22,15 +22,16 @@
     Login() {
         //alert("user:" + this.Email + " password:" + this.Password);
 
-        var data =
-        {
-            email: this.Email,
-            password: this.Password
-        };
+        //var data =
+        //{
+        //    email: this.Email,
+        //    password: this.Password
+        //};
+
+        var data = new LoginDto(this.Email, this.Password);
 
         this.Http.post("/api/login",
             data
-
         ).then(
             (response) => {
                 if (response.data === true)
@@ -39,15 +40,13 @@
             function errorCallback(response) {
                 console.log("POST-ing of data failed");
             }
-        );
-
-
+        );        
     }
 }
 
 Login.$inject = ['$http'];
 
-CrazyBooksApp.
+EstadisticaDeAlumnos.
     component('login', {
         templateUrl: './js/App/Views/Start/Login/Login.html',
         controller: ('Login', Login),
