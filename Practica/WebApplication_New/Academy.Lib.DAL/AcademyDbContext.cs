@@ -19,6 +19,10 @@ namespace Academy.Lib.DAL
         {
 
         }
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlite("Data Source=C:\\Users\\formacio\\Desktop\\Evgenii\\CSharp\\Practica\\WebApplication_New\\WebApplication_New\\Test.db");
+        }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

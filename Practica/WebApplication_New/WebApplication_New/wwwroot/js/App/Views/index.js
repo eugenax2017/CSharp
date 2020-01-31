@@ -1,10 +1,10 @@
 ﻿class Index {
 
-    get Books() {
-        return this._books;
+    get Students() {
+        return this._students;
     }
-    set Books(value) {
-        this._books = value;
+    set Students(value) {
+        this._students = value;
     }
 
     get IsLogon() {
@@ -12,16 +12,16 @@
     }
 
     constructor($http) {
-        this._books = [];
+        this._students = [];
         this.Http = $http;
     }
 
-    RequestBooks() {
-        this.Http.get("/api/books").then(
+    RequestStudents() {
+        this.Http.get("/api/students").then(
             (response) => {
-                this.Books.length = 0;
+                this.Students.length = 0;
                 for (let i in response.data) {
-                    this.Books.push(response.data[i]);
+                    this.Students.push(response.data[i]);
                 }
             },
             function errorCallback(response) {

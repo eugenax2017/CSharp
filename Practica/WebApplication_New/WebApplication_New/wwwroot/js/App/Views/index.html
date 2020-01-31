@@ -12,5 +12,10 @@
 </style>
 
 <div class="Index">    
-    <login></login>    
+    <login ng-if="!vm.IsLogon"></login> 
+    <div ng-if="vm.IsLogon">
+        Welcome to the Estadistica de students!
+        <input type="button" ng-click="vm.RequestStudents()" value="Retrieve Students" />
+        <div ui-grid="{ data: vm.Students }" class="myGrid"></div>
+    </div>
 </div>

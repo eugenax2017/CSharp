@@ -12,7 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication_New.DbContextFactory;
 
-namespace WebApplication_New.App
+namespace WebApplication_New.Boot
 {
     public class Bootstrapper
     {

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using WebApplication_New.App;
+using WebApplication_New.Boot;
 
 namespace WebApplication_New
 {
@@ -16,6 +16,7 @@ namespace WebApplication_New
         {
             var bootstrapper = new Bootstrapper();
             bootstrapper.Init();
+            var fillDictionary = new FillDictionary();
             CreateHostBuilder(args).Build().Run();
         }
 

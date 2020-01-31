@@ -42,6 +42,13 @@
             }
         );        
     }
+
+    Register() {
+
+        alert("Register me!");
+        Globals.IsLogon = true;
+
+    }
 }
 
 Login.$inject = ['$http'];
