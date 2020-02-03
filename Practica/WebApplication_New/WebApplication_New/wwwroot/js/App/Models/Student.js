@@ -5,9 +5,9 @@
     ChairNumber = 0;    
 
     constructor(name, email, dni, chairNumber) {
-        Name = name;
-        Email = email;
-        Dni = dni;
-        chairNumber = chairNumber;
+        this.Name = name;
+        this.Email = email;
+        this.Dni = dni;
+        this.ChairNumber = chairNumber;
     }
 }

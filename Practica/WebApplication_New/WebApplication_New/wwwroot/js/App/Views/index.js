@@ -29,6 +29,14 @@
             }
         );
     }
+
+    AddStudent() {        
+        var newStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));                
+        //this.RequestStudents();
+        
+        //newStudent.Name = stName;
+        //this.Students.push()
+    }
 }
 Index.$inject = ['$http'];
 
