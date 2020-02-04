@@ -1,4 +1,7 @@
 ﻿<style>
+    .nav, .pagination, .carousel, .panel-title a {
+        cursor: pointer;
+    }
 
     .Index {
         width: 100%;
@@ -10,39 +13,64 @@
         height: 450px;
     }
 
-    .My {
-        background-color: aqua;
-        align-content: end;
+    .field {
+        clear: both;
+        text-align: right;
     }
+
+    label {
+        float: left;
+        margin: 10px;
+        line-height: 25px;
+    }
+
+    input {
+        margin: 10px;
+    }
+
+    .buttons {
+        text-align: center;
+    }
+    
 </style>
 
 <div class="Index">
     <login ng-if="!vm.IsLogon"></login>
-    <div ng-if="vm.IsLogon">
-        <div class="page-header">
-            <h1>Welcome to the Estadistica de students!</h1>
-        </div>        
+    <div class="container" ng-if="vm.IsLogon">
+        <menu class="container"></menu>
+        <div class="container">
+            <h3 style="text-align: center">Welcome to the Statistics of students!</h3>
+            <input type="button" class="btn btn-info" ng-click="vm.RequestStudents()" value="Retrieve Students" />
+        </div>
         <div class="container panel">
             <div class="row">
-                <div style="background-color:green" class="col-sm-8 col-md-8">
-                    <input type="button" ng-click="vm.RequestStudents()" value="Retrieve Students" />
+                <div class="col-sm-8 col-md-8 panel panel-default">
                     <div ui-grid="{ data: vm.Students }" class="myGrid"></div>
                 </div>
-                <div style="background-color:aqua" class="col-sm-4 col-md-4">
-                    <label for="stName">Name: </label>
-                    <input type="text" id="stName" ng-model="vm.Students.Name" size="20" /><br />
-                    <label for="stEmail">Email: </label>
-                    <input type="text" id="stEmail" size="20" /><br />
-                    <label for="stDni">Dni: </label>
-                    <input type="text" id="stDni" size="20" /><br />
-                    <label for="stChairNumber">ChairNumber: </label>
-                    <input type="text" id="stChairNumber" size="20" /><br />
-                    <input type="button" ng-click="vm.AddStudent()" value="Add" />
-                    <input type="button" ng-click="" value="Update" />
-                    <input type="button" ng-click="" value="Clear" />
+                <div class="col-sm-4 col-md-4">
+                    <div class="field panel panel-default">
+                        <label for="stName">Name: </label>
+                        <input type="text" id="stName" ng-model="vm.Students" size="20" />
+                    </div>
+                    <div class="field panel panel-default">
+                        <label for="stEmail">Email: </label>
+                        <input type="text" id="stEmail" size="20" />
+                    </div>
+                    <div class="field panel panel-default">
+                        <label for="stDni">Dni: </label>
+                        <input type="text" id="stDni" size="20" />
+                    </div>
+                    <div class="field panel panel-default">
+                        <label for="stChairNumber">Chair number: </label>
+                        <input type="text" id="stChairNumber" size="20" /><br />
+                    </div>
+                    <div class="buttons">
+                        <input class="btn btn-info" type="button" ng-click="vm.AddStudent()" value="Add" />
+                        <input type="button" class="btn btn-info" ng-click="" value="Update" />
+                        <input type="button" class="btn btn-info" ng-click="" value="Clear" />
+                    </div>
                 </div>
             </div>
         </div>
-
     </div>
-</div>
+</div> 
