@@ -14,15 +14,15 @@
             </div>
             <div class="field panel panel-default">
                 <label for="stEmail">Email: </label>
-                <input type="text" id="stEmail" ng-model="vm.SelectedRows.email" size="20" />
+                <input type="text" id="stEmail" value={{vm.SelectedRows.email}} size="20" />
             </div>
             <div class="field panel panel-default">
                 <label for="stDni">Dni: </label>
-                <input type="text" id="stDni" ng-model="vm.SelectedRows.dni" size="20" />
+                <input type="text" id="stDni" value={{vm.SelectedRows.dni}} size="20" />
             </div>
             <div class="field panel panel-default">
                 <label for="stChairNumber">Chair number: </label>
-                <input type="text" id="stChairNumber" ng-model="vm.SelectedRows.chairNumber" size="20" /><br />
+                <input type="text" id="stChairNumber" value={{vm.SelectedRows.chairNumber}} size="20" /><br />
             </div>
             <div class="buttons">
                 <input type="button" class="btn btn-info" ng-click="vm.ClearStudent()" value="Clear" />

@@ -1,10 +1,26 @@
-﻿class StudentService {
+﻿class StudentService
+{
 
-    constructor($http) {
+    constructor($http)
+    {
         this.Http = $http;
     }
 
-    GetAllAsync(callbackAction) {
-
+    GetAllAsync(callbackAction)
+    {
+        this.Http.get("/api/students").then(
+            (response) =>
+            {
+                callbackAction(response.data);
+            },
+            function errorCallback(response)
+            {
+                console.log("POST-ing of data failed");
+            }
+        );
     }
 }
+
+StudentService.$inject = ['$http'];
+
+EstadisticaDeAlumnos.service("studentService", StudentService);
