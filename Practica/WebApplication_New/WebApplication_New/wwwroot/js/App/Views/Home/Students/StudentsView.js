@@ -17,8 +17,24 @@
 
     get SelectedRows()
     {
-        var selectedRows = this.gridOptions.gridApi.selection.getSelectedRows();
-        return selectedRows[0];
+        var emptyStudent = new Object();
+        emptyStudent.name = "",
+        emptyStudent.email = "",
+        emptyStudent.dni = "",
+        emptyStudent.chairNumber = 0;
+
+        try
+        {
+            var selectedRows = this.gridOptions.gridApi.selection.getSelectedRows();
+            if (selectedRows.length > 0)
+                return selectedRows[0];
+        }
+        catch (error)
+        {
+            return emptyStudent;
+        }  
+
+        return emptyStudent;
     }
 
     get IsLogon()
@@ -61,31 +77,70 @@
         {
             this.Students.push(data[i]);
         }
-
     }
 
     AddStudent()
     {
         var newStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
-        this.Http.post("/api/students", newStudent).then(
-            (response) =>
+        
+        this.StudentService.AddElementAsync(newStudent, (data) =>
+        {
+            if (data)
             {
-                if (response.data)
-                {
-                    this.gridOptions.data.push(response.data);
-                    console.log("POST-ing of data successfully!");
-                }
-            },
-            function errorCallback(response)
-            {
-                console.log("POST-ing of data failed");
+                this.gridOptions.data.push(data);
+                console.log("POST-ing of data successfully!");
+                this.ClearForm();
             }
-        );
+        });
+
+        //this.Http.post("/api/students", newStudent).then(
+        //    (response) =>
+        //    {
+        //        if (response.data)
+        //        {
+        //            this.gridOptions.data.push(response.data);
+        //            console.log("POST-ing of data successfully!");
+        //        }
+        //    },
+        //    function errorCallback(response)
+        //    {
+        //        console.log("POST-ing of data failed");
+        //    }
+        //);
     }
 
-    UpdateStudent()
+
+    UpdateStudent() //no funcciona
     {
-        alert(this.SelectedRows.name);
+        var row = this.SelectedRows;
+        if (row)
+        {
+            this.StudentService.UpdateElementAsync(row, (data) =>
+            {
+                if (data)
+                {
+                    console.log("PUT-ing of data successfully!");
+                    this.ClearForm();
+                }
+                    
+            });
+        }
+    }
+
+    DeleteStudent(row)
+    { //https:///aspdotnetcodehelp.wordpress.com/2017/05/13/implementing-delete-functionality-in-uigrid/
+        if (row)
+        {
+            alert("delete!");
+        }
+    }
+
+    ClearForm()
+    {
+        stName.value = "";
+        stEmail.value = "";
+        stDni.value = "";
+        stChairNumber.value = 0;
     }
 }
 
