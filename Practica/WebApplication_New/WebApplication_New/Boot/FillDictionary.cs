@@ -14,7 +14,7 @@ namespace WebApplication_New.Boot
         {
             var repo = Entity.DepCon.Resolve<IRepository<Student>>();
             var count = repo.QueryAll().ToList().Count();
-            if (count == 0)
+            if (count < 3)
             {
                 Student newStudent = new Student { Name = "Eugene", Email = "eugene", Dni = "5455", ChairNumber = 5 };
                 newStudent.Save();

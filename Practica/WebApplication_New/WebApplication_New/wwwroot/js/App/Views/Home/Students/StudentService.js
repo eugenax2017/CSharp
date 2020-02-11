@@ -43,7 +43,21 @@
             },
             function errorCallback(response)
             {
-                console.log("POST-ing of data failed");
+                console.log("PUT-ing of data failed");
+            }
+        );
+    }
+
+    DeleteElementAsync(element, callbackAction)
+    {
+        this.Http.delete(`/api/students/${element.id}`, element).then(
+            (response) =>
+            {
+                callbackAction(response.data);
+            },
+            function errorCallback(response)
+            {
+                console.log("DELETE-ing of data failed");
             }
         );
     }

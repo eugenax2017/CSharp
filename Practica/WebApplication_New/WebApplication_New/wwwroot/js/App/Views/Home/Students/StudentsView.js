@@ -55,6 +55,12 @@
             enableRowHeaderSelection: false,
             data: this.Students,
             multiSelect: false,
+            columnDefs: [
+                { name: "Name", field: "name" },
+                { name: "Dni", field: "dni" },
+                { name: "Email", field: "email" },
+                { name: "Chair", field: "chairNumber" },
+            ],
             onRegisterApi: function (gridApi)
             {
                 this.gridApi = gridApi;
@@ -87,7 +93,7 @@
         {
             if (data)
             {
-                this.gridOptions.data.push(data);
+                this.gridOptions.data.push(data); //(or this.RequestStudents())
                 console.log("POST-ing of data successfully!");
                 this.ClearForm();
             }
@@ -110,17 +116,24 @@
     }
 
 
-    UpdateStudent() //no funcciona
-    {
-        var row = this.SelectedRows;
+    
+    UpdateStudent(row) 
+    {        
         if (row)
         {
+            //var updStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
+            //updStudent.Id = row.Id; 
+            row.name = stName.value;
+            row.dni = stDni.value;
+            row.chairNumber = stChairNumber.value;
+            row.email = stEmail.value;
             this.StudentService.UpdateElementAsync(row, (data) =>
             {
                 if (data)
                 {
-                    console.log("PUT-ing of data successfully!");
+                    this.RequestStudents();
                     this.ClearForm();
+                    console.log("PUT-ing of data successfully!");                    
                 }
                     
             });
@@ -131,7 +144,15 @@
     { //https:///aspdotnetcodehelp.wordpress.com/2017/05/13/implementing-delete-functionality-in-uigrid/
         if (row)
         {
-            alert("delete!");
+            this.StudentService.DeleteElementAsync(row, (data) =>
+            {
+                if (data)
+                {
+                    this.RequestStudents(); // or this.gridOptions.data.indexOf(row) 
+                    //this.gridOptions.data.(data);
+                    console.log("DELETE-ing of data successfully!");
+                }
+            });            
         }
     }
 
