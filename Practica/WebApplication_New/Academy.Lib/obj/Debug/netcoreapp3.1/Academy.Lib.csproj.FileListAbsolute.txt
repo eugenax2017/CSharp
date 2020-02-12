@@ -27,3 +27,4 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.csproj.CopyComplete
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.dll
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.pdb
+C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.csprojAssemblyReference.cache
