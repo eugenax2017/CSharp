@@ -22,7 +22,6 @@ C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\bin\Debug\netcoreapp3.1\Common.Lib.pdb
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\bin\Debug\netcoreapp3.1\Common.Lib.Client.pdb
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\bin\Debug\netcoreapp3.1\Common.Lib.DAL.EFCore.pdb
-C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.csprojAssemblyReference.cache
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.AssemblyInfoInputs.cache
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.AssemblyInfo.cs
 C:\Users\formacio\Desktop\Evgenii\CSharp\Practica\WebApplication_New\Academy.Lib\obj\Debug\netcoreapp3.1\Academy.Lib.csproj.CopyComplete

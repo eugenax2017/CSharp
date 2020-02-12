@@ -1,4 +1,6 @@
-﻿class Login {
+﻿class Login
+{
+
     get Email() {
         return this._email;
     }
