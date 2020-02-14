@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Academy.Lib.DAL;
 using Academy.Lib.Models;
+using Common.Lib.Infrastructure;
 
 namespace WebApplication_New.Controllers
 {
@@ -78,12 +79,17 @@ namespace WebApplication_New.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Student>> PostStudent(Student student)
+        public async Task<SaveResult<Student>> PostStudent(Student student)
         {
-            _context.Students.Add(student);
-            await _context.SaveChangesAsync();
+            return await Task.Run(() =>
+            {
+                return student.Save();
+            });
 
-            return CreatedAtAction("GetStudent", new { id = student.Id }, student);
+            //_context.Students.Add(student);
+            //await _context.SaveChangesAsync();
+
+            //return CreatedAtAction("GetStudent", new { id = student.Id }, student);
         }
 
         // DELETE: api/Students/5

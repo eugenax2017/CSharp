@@ -1,6 +1,42 @@
 ﻿class StudentsView
 {
 
+    get Name()
+    {
+        return this._name;
+    }
+    set Name(value)
+    {
+        this._name = value;
+    }
+
+    get Dni()
+    {
+        return this._dni;
+    }
+    set Dni(value)
+    {
+        this._dni = value;
+    }
+
+    get Email()
+    {
+        return this._email;
+    }
+    set Email(value)
+    {
+        this._email = value;
+    }
+
+    get ChairNumber()
+    {
+        return this._chairNumber;
+    }
+    set ChairNumber(value)
+    {
+        this._chairNumber = value;
+    }
+
     get Students()
     {
         return this._students;
@@ -17,24 +53,21 @@
 
     get SelectedRows()
     {
-        var emptyStudent = new Object();
-        emptyStudent.name = "",
-        emptyStudent.email = "",
-        emptyStudent.dni = "",
-        emptyStudent.chairNumber = 0;
+        var returnValue = this.EmptyStudent();
 
         try
         {
             var selectedRows = this.gridOptions.gridApi.selection.getSelectedRows();
             if (selectedRows.length > 0)
-                return selectedRows[0];
+                returnValue = selectedRows[0];
         }
         catch (error)
         {
-            return emptyStudent;
+            returnValue = this.EmptyStudent();
         }  
 
-        return emptyStudent;
+        console.log(returnValue);
+        return returnValue;
     }
 
     get IsLogon()
@@ -45,7 +78,8 @@
     constructor(studentService)
     {
         this._students = [];
-        this._selectedRows = "";
+        //this._selectedRows = "";
+        this.SelectedRows = this.EmptyStudent();
         this.StudentService = studentService;
         this.gridOptions = {
             enableColumnMenus: false,
@@ -85,17 +119,39 @@
         }
     }
 
-    AddStudent()
+    PrintErrors(errorArr) //don`t foget "this!"
+    {
+        if (errorArr.length > 0)
+        {
+            for (let i = 0; i < errorArr.length; i++)
+            {
+                //console.log(errorArr[i]);
+                alert(errorArr[i]);
+            }
+        }
+    }
+
+    SaveStudent()
     {
         var newStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
+        // or 
+        //var newStudent = new Student(this.Name, this.Email, this.Dni, parseInt(this.ChairNumber));
         
         this.StudentService.AddElementAsync(newStudent, (data) =>
         {
             if (data)
-            {
-                this.gridOptions.data.push(data); //(or this.RequestStudents())
-                console.log("POST-ing of data successfully!");
-                this.ClearForm();
+            {                
+                if (data.isSuccess)
+                {
+                    this.RequestStudents(); //this.gridOptions.data.push(data);
+                    console.log("POST-ing of data successfully!");
+                }
+                else
+                {
+                    this.PrintErrors(data.validation.errors);
+                    console.log("POST-ing of data is failed!");
+                }
+                this.SelectedRows = this.EmptyStudent();
             }
         });
 
@@ -113,29 +169,34 @@
         //        console.log("POST-ing of data failed");
         //    }
         //);
-    }
-
-
+    }   
     
-    UpdateStudent(row) 
+    EditStudent(row) //add check If chairNumber is number
     {        
         if (row)
         {
             //var updStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
             //updStudent.Id = row.Id; 
-            row.name = stName.value;
-            row.dni = stDni.value;
-            row.chairNumber = stChairNumber.value;
-            row.email = stEmail.value;
+            this.Name = row.name;
+            this.Dni = row.dni; //stDni.value;
+            this.ChairNumber = row.chairNumber; //stChairNumber.value;
+            this.Email = row.email; //stEmail.value;
             this.StudentService.UpdateElementAsync(row, (data) =>
             {
                 if (data)
                 {
-                    this.RequestStudents();
-                    this.ClearForm();
-                    console.log("PUT-ing of data successfully!");                    
-                }
-                    
+                    if (data.isSuccess)
+                    {
+                        this.RequestStudents();                        
+                        console.log("PUT-ing of data successfully!"); 
+                    }
+                    else
+                    {
+                        this.PrintErrors(data.validation.errors);
+                        console.log("PUT-ing of data is failed!");
+                    }           
+                    this.SelectedRows = this.EmptyStudent();                                        
+                }                    
             });
         }
     }
@@ -147,7 +208,7 @@
             this.StudentService.DeleteElementAsync(row, (data) =>
             {
                 if (data)
-                {
+                {                    
                     this.RequestStudents(); // or this.gridOptions.data.indexOf(row) 
                     //this.gridOptions.data.(data);
                     console.log("DELETE-ing of data successfully!");
@@ -155,13 +216,23 @@
             });            
         }
     }
-
-    ClearForm()
+       
+    EmptyStudent()
     {
-        stName.value = "";
-        stEmail.value = "";
-        stDni.value = "";
-        stChairNumber.value = 0;
+        var emptyStudent = new Object();
+        emptyStudent.name = "";
+        emptyStudent.email = "";
+        emptyStudent.dni = "";
+        emptyStudent.chairNumber = 0;
+        return emptyStudent;
+    }
+
+    ClearStudent()
+    {
+        this.Dni = "";
+        this.Name = "";
+        this.Email = "";
+        this.ChairNumber = 0;
     }
 }
 
