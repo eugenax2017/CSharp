@@ -73,7 +73,7 @@ namespace Academy.Lib.Models
             return output;
         }
 
-        public static ValidationResult<int> ValidateChairNumber(string chairNumberText, bool dublicate = true)
+        public static ValidationResult<int> ValidateChairNumber(string chairNumberText, Guid currentId = default, bool dublicate = true)
         {
             var output = new ValidationResult<int>()
             {
@@ -110,7 +110,12 @@ namespace Academy.Lib.Models
                 var repoStudents = DepCon.Resolve<IStudentsRepository>();
                 var currentStudentInChair = repoStudents.QueryAll().FirstOrDefault(s => s.ChairNumber == chairNumber);
 
-                if (currentStudentInChair != null)
+                if (currentId == default && currentStudentInChair != null)
+                {
+                    output.IsSuccess = false;
+                    output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
+                }
+                else if (currentId != default && currentStudentInChair.Id != currentId)
                 {
                     output.IsSuccess = false;
                     output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
@@ -172,7 +177,7 @@ namespace Academy.Lib.Models
 
         public void ValidateChairNumber(ValidationResult validationResult)
         {
-            var vr = ValidateChairNumber(this.ChairNumber.ToString());
+            var vr = ValidateChairNumber(this.ChairNumber.ToString(), this.Id);
 
             if (!vr.IsSuccess)
             {
@@ -186,11 +191,11 @@ namespace Academy.Lib.Models
 
             // cambiar ValidateName para que sea igual que ValidateDni
             ValidateName(output);
-            if (this.Id == default)
-            {
+            //if (this.Id == default)
+            //{
                 ValidateDni(output);
                 ValidateChairNumber(output);
-            }
+            //}
             return output;
         }
 

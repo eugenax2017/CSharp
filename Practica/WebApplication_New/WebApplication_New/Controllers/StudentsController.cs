@@ -47,32 +47,38 @@ namespace WebApplication_New.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutStudent(Guid id, Student student)
+        //public async Task<IActionResult> PutStudent(Guid id, Student student)
+        public async Task<SaveResult<Student>> PutStudent(Guid id, Student student)
         {
-            if (id != student.Id)
-            {
-                return BadRequest();
-            }
+            //if (id != student.Id)
+            //{
+            //    return BadRequest();
+            //}
 
-            _context.Entry(student).State = EntityState.Modified;
-
-            try
+            return await Task.Run(() =>
             {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!StudentExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+                return student.Save();
+            });
 
-            return NoContent();
+            //_context.Entry(student).State = EntityState.Modified;
+
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!StudentExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
+
+            //return NoContent();
         }
 
         // POST: api/Students

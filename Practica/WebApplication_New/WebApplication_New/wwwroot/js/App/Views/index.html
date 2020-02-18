@@ -38,6 +38,7 @@
     <login ng-if="!vm.IsLogon"></login>
     <div class="container" ng-if="vm.IsLogon">
         <menu class="container"></menu>
-        <studentsview></studentsview>
+        <div ng-view></div>
+        <!----<studentsview></studentsview>-->
     </div>
 </div> 

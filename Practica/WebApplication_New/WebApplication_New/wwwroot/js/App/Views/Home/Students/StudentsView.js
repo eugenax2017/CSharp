@@ -131,29 +131,57 @@
         }
     }
 
-    SaveStudent()
+    SaveStudent(row)
     {
-        var newStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
-        // or 
-        //var newStudent = new Student(this.Name, this.Email, this.Dni, parseInt(this.ChairNumber));
-        
-        this.StudentService.AddElementAsync(newStudent, (data) =>
+        if (!row.id)
         {
-            if (data)
-            {                
-                if (data.isSuccess)
+            var newStudent = new Student(stName.value, stEmail.value, stDni.value, parseInt(stChairNumber.value));
+            // or 
+            //var newStudent = new Student(this.Name, this.Email, this.Dni, parseInt(this.ChairNumber));
+
+            this.StudentService.AddElementAsync(newStudent, (data) =>
+            {
+                if (data)
                 {
-                    this.RequestStudents(); //this.gridOptions.data.push(data);
-                    console.log("POST-ing of data successfully!");
+                    if (data.isSuccess)
+                    {
+                        this.RequestStudents(); //this.gridOptions.data.push(data);
+                        console.log("POST-ing of data successfully!");
+                    }
+                    else
+                    {
+                        this.PrintErrors(data.validation.errors);
+                        console.log("POST-ing of data is failed!");
+                    }                    
                 }
-                else
+            });
+        }
+        else
+        {
+            row.name = this.Name;
+            row.chairNumber = this.ChairNumber;
+            row.email = this.Email;
+            row.dni = this.Dni;
+
+            this.StudentService.UpdateElementAsync(row, (data) =>
+            {
+                if (data)
                 {
-                    this.PrintErrors(data.validation.errors);
-                    console.log("POST-ing of data is failed!");
+                    if (data.isSuccess)
+                    {
+                        this.RequestStudents();
+                        console.log("PUT-ing of data successfully!");
+                    }
+                    else
+                    {
+                        this.PrintErrors(data.validation.errors);
+                        console.log("PUT-ing of data is failed!");
+                    }                    
                 }
-                this.SelectedRows = this.EmptyStudent();
-            }
-        });
+            });
+        }
+        this.ClearStudent();
+        
 
         //this.Http.post("/api/students", newStudent).then(
         //    (response) =>
@@ -180,24 +208,7 @@
             this.Name = row.name;
             this.Dni = row.dni; //stDni.value;
             this.ChairNumber = row.chairNumber; //stChairNumber.value;
-            this.Email = row.email; //stEmail.value;
-            this.StudentService.UpdateElementAsync(row, (data) =>
-            {
-                if (data)
-                {
-                    if (data.isSuccess)
-                    {
-                        this.RequestStudents();                        
-                        console.log("PUT-ing of data successfully!"); 
-                    }
-                    else
-                    {
-                        this.PrintErrors(data.validation.errors);
-                        console.log("PUT-ing of data is failed!");
-                    }           
-                    this.SelectedRows = this.EmptyStudent();                                        
-                }                    
-            });
+            this.Email = row.email; //stEmail.value;            
         }
     }
 
@@ -233,6 +244,7 @@
         this.Name = "";
         this.Email = "";
         this.ChairNumber = 0;
+        this.RequestStudents();
     }
 }
 

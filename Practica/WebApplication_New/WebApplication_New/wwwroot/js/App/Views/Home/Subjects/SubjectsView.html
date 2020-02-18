@@ -1,10 +1,27 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
-    <h1>Welcome to the subjects!</h1>
-</body>
-</html>
+﻿<div class="container">
+    <h3 style="text-align: center">Welcome to the Statistics of students!</h3>
+    <input type="button" class="btn btn-info" ng-click="vm.RequestSubjects()" value="Retrieve Subjects" />
+</div>
+<div class="container panel">
+    <div class="row">
+        <div class="col-sm-8 col-md-8">
+            <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-cellnav class="myGrid"></div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="field panel panel-default">
+                <label for="stName">Name: </label>
+                <input type="text" id="stName" ng-model="vm.Name" size="20" />
+            </div>
+            <div class="field panel panel-default">
+                <label for="stTeacher">Teacher: </label>
+                <input type="text" id="stEmail" ng-model="vm.Teacher" size="20" />
+            </div>           
+            <div class="buttons">
+                <input type="button" class="btn btn-info" ng-click="vm.ClearSubject()" value="Clear" />
+                <input class="btn btn-info" type="button" ng-click="vm.SaveSubject(vm.SelectedRows)" value="Save" />
+                <input type="button" class="btn btn-info" ng-click="vm.EditSubject(vm.SelectedRows)" value="Edit" />
+                <input type="button" class="btn btn-info" ng-click="vm.DeleteSubject(vm.SelectedRows)" value="Delete" />
+            </div>
+        </div>
+    </div>
+</div>
