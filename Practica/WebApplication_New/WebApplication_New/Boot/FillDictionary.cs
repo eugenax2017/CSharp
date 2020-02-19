@@ -12,15 +12,29 @@ namespace WebApplication_New.Boot
     {
         public FillDictionary()
         {
-            //var repo = Entity.DepCon.Resolve<IRepository<Student>>();
-            //var count = repo.QueryAll().ToList().Count();
+            var repo = Entity.DepCon.Resolve<IRepository<Student>>();
+            ////var count = repo.QueryAll().ToList().Count();
+            var count = 0;
+            if (count < 3)
+            {
+                Student newStudent = new Student { Name = "Eugene", Dni = "123", ChairNumber = 5, Email = "eugene" };
+                newStudent.Save();
+            //    Subject newStudent2 = new Subject { Name = "Fisica", Teacher = "Marta" };
+            //    newStudent2.Save();
+            //    Subject newStudent3 = new Subject { Name = "Music", Teacher = "Marta" };
+            //    newStudent3.Save();
+            }
+
+            //var repo = Entity.DepCon.Resolve<IRepository<Subject>>();
+            ////var count = repo.QueryAll().ToList().Count();
+            //var count = 0;
             //if (count < 3)
             //{
-            //    Student newStudent = new Student { Name = "Eugene", Email = "eugene", Dni = "5455", ChairNumber = 5 };
+            //    Subject newStudent = new Subject { Name = "Maths", Teacher = "Marta" };
             //    newStudent.Save();
-            //    Student newStudent2 = new Student { Name = "Marta", Email = "marta", Dni = "4456", ChairNumber = 6 };
+            //    Subject newStudent2 = new Subject { Name = "Fisica", Teacher = "Marta" };
             //    newStudent2.Save();
-            //    Student newStudent3 = new Student { Name = "Lucy", Email = "lucy", Dni = "3456", ChairNumber = 7 };
+            //    Subject newStudent3 = new Subject { Name = "Music", Teacher = "Marta" };
             //    newStudent3.Save();
             //}
             //if (count > 3)
@@ -32,6 +46,6 @@ namespace WebApplication_New.Boot
             //    }
             //}
         }
-        
+
     }
 }

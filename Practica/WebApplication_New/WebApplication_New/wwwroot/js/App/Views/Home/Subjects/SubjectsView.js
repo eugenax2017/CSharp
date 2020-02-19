@@ -14,7 +14,7 @@
     {
         return this._teacher;
     }
-    set Email(value)
+    set Teacher(value)
     {
         this._teacher = value;
     }   
@@ -62,7 +62,7 @@
         this._subjects = [];
         //this._selectedRows = "";
         this.SelectedRows = this.EmptySubject();
-        this.SubjectService = SubjectService;
+        this.SubjectService = subjectService;
         this.gridOptions = {
             enableColumnMenus: false,
             enableHorizontalScrollbar: 0,
@@ -202,7 +202,7 @@
     }
 }
 
-SubjectsView.$inject = ['SubjectService'];
+SubjectsView.$inject = ['subjectService'];
 
 EstadisticaDeAlumnos.
     component('subjectsview', {

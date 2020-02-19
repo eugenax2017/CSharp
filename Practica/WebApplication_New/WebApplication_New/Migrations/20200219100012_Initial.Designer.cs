@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WebApplication_New.Migrations
 {
     [DbContext(typeof(AcademyDbContext))]
-    [Migration("20200131101303_Initial")]
+    [Migration("20200219100012_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -52,6 +52,20 @@ namespace WebApplication_New.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("Student");
+                });
+
+            modelBuilder.Entity("Academy.Lib.Models.Subject", b =>
+                {
+                    b.HasBaseType("Common.Lib.Core.Entity");
+
+                    b.Property<string>("Name")
+                        .HasColumnName("Subject_Name")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Teacher")
+                        .HasColumnType("TEXT");
+
+                    b.HasDiscriminator().HasValue("Subject");
                 });
 #pragma warning restore 612, 618
         }

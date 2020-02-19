@@ -2,21 +2,25 @@
     ['ui.bootstrap',
         'ui.grid', 'ui.grid.selection', 'ngRoute']);
 
-EstadisticaDeAlumnos.config(function($routeProvider) {
-    $routeProvider.when("/", {
-        templateUrl: "./js/App/Views/Home/Students/StudentsView.html",
+EstadisticaDeAlumnos.config(function ($routeProvider)
+{
+    $routeProvider.when('/', {
+        templateUrl: './js/App/Views/Home/Students/StudentsView.html',
         controller: ('StudentsView', StudentsView),
         controllerAs: 'vm'
-    })
-        .when("#!/students", {
-        templateUrl: "./js/App/Views/Home/Students/StudentsView.html",
+    });
+    $routeProvider.when('/students', {
+        templateUrl: './js/App/Views/Home/Students/StudentsView.html',
         controller: ('StudentsView', StudentsView),
         controllerAs: 'vm'
-    })
-        .when("#!/subjects", {
-        templateUrl: "./js/App/Views/Home/Subjects/SubjectsView.html",
+    });
+    $routeProvider.when('/subjects', {
+        templateUrl: './js/App/Views/Home/Subjects/SubjectsView.html',
         controller: ('SubjectsView', SubjectsView),
-        controllerAs: 'vm'            
+        controllerAs: 'vm'
+    });
+    $routeProvider.otherwise({
+        redirectTo: '/'
     });
 });
 

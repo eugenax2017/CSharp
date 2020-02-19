@@ -16,7 +16,9 @@ namespace WebApplication_New.Migrations
                     Name = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Dni = table.Column<string>(nullable: true),
-                    ChairNumber = table.Column<int>(nullable: true)
+                    ChairNumber = table.Column<int>(nullable: true),
+                    Subject_Name = table.Column<string>(nullable: true),
+                    Teacher = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
