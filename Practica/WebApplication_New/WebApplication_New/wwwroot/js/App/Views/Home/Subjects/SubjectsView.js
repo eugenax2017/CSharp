@@ -1,6 +1,5 @@
 ﻿class SubjectsView
 {
-
     get Name()
     {
         return this._name;

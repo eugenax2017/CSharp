@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace WebApplication_New.Migrations
 {
     [DbContext(typeof(AcademyDbContext))]
-    [Migration("20200219100012_Initial")]
+    [Migration("20200220094454_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,27 @@ namespace WebApplication_New.Migrations
                     b.ToTable("Entity");
 
                     b.HasDiscriminator<string>("Discriminator").HasValue("Entity");
+                });
+
+            modelBuilder.Entity("Academy.Lib.Models.Exam", b =>
+                {
+                    b.HasBaseType("Common.Lib.Core.Entity");
+
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("SubjectId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Text")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Title")
+                        .HasColumnType("TEXT");
+
+                    b.HasIndex("SubjectId");
+
+                    b.HasDiscriminator().HasValue("Exam");
                 });
 
             modelBuilder.Entity("Academy.Lib.Models.Student", b =>
@@ -66,6 +87,15 @@ namespace WebApplication_New.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasDiscriminator().HasValue("Subject");
+                });
+
+            modelBuilder.Entity("Academy.Lib.Models.Exam", b =>
+                {
+                    b.HasOne("Academy.Lib.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Academy.Lib.DAL;
 using Academy.Lib.Models;
+using Common.Lib.Infrastructure;
 
 namespace WebApplication_New.Controllers
 {
@@ -46,44 +47,60 @@ namespace WebApplication_New.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSubject(Guid id, Subject subject)
-        {
-            if (id != subject.Id)
-            {
-                return BadRequest();
-            }
+        //public async Task<IActionResult> PutSubject(Guid id, Subject subject)
+        //{
+        //    if (id != subject.Id)
+        //    {
+        //        return BadRequest();
+        //    }
 
-            _context.Entry(subject).State = EntityState.Modified;
+        //    _context.Entry(subject).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!SubjectExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+        //    try
+        //    {
+        //        await _context.SaveChangesAsync();
+        //    }
+        //    catch (DbUpdateConcurrencyException)
+        //    {
+        //        if (!SubjectExists(id))
+        //        {
+        //            return NotFound();
+        //        }
+        //        else
+        //        {
+        //            throw;
+        //        }
+        //    }
 
-            return NoContent();
+        //    return NoContent();
+        //}
+
+        public async Task<SaveResult<Subject>> PutStudent(Guid id, Subject subject)
+        {        
+            return await Task.Run(() =>
+            {
+                return subject.Save();
+            });            
         }
 
         // POST: api/Subjects
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Subject>> PostSubject(Subject subject)
-        {
-            _context.Subjects.Add(subject);
-            await _context.SaveChangesAsync();
+        //public async Task<ActionResult<Subject>> PostSubject(Subject subject)
+        //{
+        //    _context.Subjects.Add(subject);
+        //    await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetSubject", new { id = subject.Id }, subject);
+        //    return CreatedAtAction("GetSubject", new { id = subject.Id }, subject);
+        //}
+
+        public async Task<SaveResult<Subject>> PostSubject(Subject subject)
+        {
+            return await Task.Run(() =>
+            {
+                return subject.Save();
+            });
         }
 
         // DELETE: api/Subjects/5

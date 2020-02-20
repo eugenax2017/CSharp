@@ -19,6 +19,11 @@ EstadisticaDeAlumnos.config(function ($routeProvider)
         controller: ('SubjectsView', SubjectsView),
         controllerAs: 'vm'
     });
+    $routeProvider.when('/exams', {
+        templateUrl: './js/App/Views/Home/Exams/ExamsView.html',
+        controller: ('ExamsView', ExamsView),
+        controllerAs: 'vm'
+    });
     $routeProvider.otherwise({
         redirectTo: '/'
     });

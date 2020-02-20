@@ -1,7 +1,9 @@
 ﻿using Common.Lib.Core;
+using Common.Lib.Core.Context;
 using Common.Lib.Infrastructure;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Academy.Lib.Models
@@ -24,7 +26,7 @@ namespace Academy.Lib.Models
             return base.Delete<Subject>();
         }
 
-        public static ValidationResult<string> ValidateName(string name)
+        public static ValidationResult<string> ValidateName(string name, Guid currentId = default, bool dublicate = true)
         {
             var output = new ValidationResult<string>()
             {
@@ -37,6 +39,24 @@ namespace Academy.Lib.Models
                 output.Errors.Add("el nombre de sujeto no puede estar vacío");
             }
 
+            var repoSubjects = Entity.DepCon.Resolve<IRepository<Subject>>();
+
+            var subjectByName = repoSubjects.QueryAll().FirstOrDefault(s => s.Name == name);
+
+            if (currentId == default)
+            {
+                if (subjectByName != null) //save new element
+                {
+                    output.IsSuccess = false;
+                    output.Errors.Add($"ya hay un subject {subjectByName.Name}");
+                }
+            }
+            else if (subjectByName.Id != currentId) //update
+            {
+                output.IsSuccess = false;
+                output.Errors.Add($"ya hay un subject {subjectByName.Name}");
+            }
+
             if (output.IsSuccess)
             {
                 output.ValidatedResult = name;
@@ -46,7 +66,7 @@ namespace Academy.Lib.Models
         }
         public void ValidateName(ValidationResult validationResult)
         {
-            var validateNameResult = ValidateName(this.Name);
+            var validateNameResult = ValidateName(this.Name, this.Id);
             if (!validateNameResult.IsSuccess)
             {
                 validationResult.IsSuccess = false;

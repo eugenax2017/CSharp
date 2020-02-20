@@ -13,6 +13,10 @@ namespace WebApplication_New.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Discriminator = table.Column<string>(nullable: false),
+                    Title = table.Column<string>(nullable: true),
+                    Text = table.Column<string>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: true),
+                    SubjectId = table.Column<Guid>(nullable: true),
                     Name = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
                     Dni = table.Column<string>(nullable: true),
@@ -23,7 +27,18 @@ namespace WebApplication_New.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Entity", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Entity_Entity_SubjectId",
+                        column: x => x.SubjectId,
+                        principalTable: "Entity",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Entity_SubjectId",
+                table: "Entity",
+                column: "SubjectId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
