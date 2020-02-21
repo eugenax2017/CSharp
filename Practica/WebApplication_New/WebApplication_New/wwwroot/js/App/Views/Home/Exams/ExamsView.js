@@ -7,6 +7,8 @@ class ExamsView
         //this._selectedRows = "";
         //this.SelectedRows = this.EmptySubject();
         this.ExamService = examService;
+        this.myDate = new Date();
+        this.isOpen = false; 
         //this.gridOptions = {
         //    enableColumnMenus: false,
         //    enableHorizontalScrollbar: 0,
@@ -24,11 +26,11 @@ class ExamsView
         //        this.gridApi = gridApi;
         //    }
         //}
-        
+       
     }
 }
 
-SubjectsView.$inject = ['examService'];
+ExamsView.$inject = ['examService'];
 
 EstadisticaDeAlumnos.
     component('examsview', {

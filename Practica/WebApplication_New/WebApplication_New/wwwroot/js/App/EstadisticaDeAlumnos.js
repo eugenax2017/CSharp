@@ -1,6 +1,7 @@
 ﻿var EstadisticaDeAlumnos = angular.module('EstadisticaDeAlumnos',
     ['ui.bootstrap',
-        'ui.grid', 'ui.grid.selection', 'ngRoute']);
+        'ui.grid', 'ui.grid.selection',
+        'ngRoute', 'ngMaterial', 'ngMessages']);
 
 EstadisticaDeAlumnos.config(function ($routeProvider)
 {
