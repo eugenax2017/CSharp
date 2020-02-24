@@ -20,6 +20,20 @@
         );
     }
 
+    GetAllSubjectsAsync(callbackAction)
+    {
+        this.Http.get("/api/subjects").then(
+            (response) =>
+            {
+                callbackAction(response.data);
+            },
+            function errorCallback(response)
+            {
+                console.log("GET-ing of data failed");
+            }
+        );
+    }
+
     AddElementAsync(element, callbackAction)
     {
         this.Http.post("/api/exams", element).then(
