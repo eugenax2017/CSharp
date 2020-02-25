@@ -40,10 +40,10 @@ namespace WebApplication_New.Boot
                 return new EfCoreRepository<Subject>(GetDbConstructor());
             });
 
-            //var examsRepoBuilder = new Func<object[], object>((parameters) =>
-            //{
-            //    return new EfCoreRepository<Exam>(GetDbConstructor());
-            //});
+            var examsRepoBuilder = new Func<object[], object>((parameters) =>
+            {
+                return new EfCoreRepository<Exam>(GetDbConstructor());
+            });
 
             //var studentSubjectRepoBuilder = new Func<object[], object>((parameters) =>
             //{
@@ -60,7 +60,7 @@ namespace WebApplication_New.Boot
             depCon.Register<IStudentsRepository, StudentsRepository>((parameters) => new StudentsRepository(GetDbConstructor()));
 
             depCon.Register<IRepository<Subject>, EfCoreRepository<Subject>>(subjectsRepoBuilder);
-            //depCon.Register<IRepository<Exam>, EfCoreRepository<Exam>>(examsRepoBuilder);
+            depCon.Register<IRepository<Exam>, EfCoreRepository<Exam>>(examsRepoBuilder);
             //depCon.Register<IRepository<StudentSubject>, EfCoreRepository<StudentSubject>>(studentSubjectRepoBuilder);
             //depCon.Register<IRepository<StudentExam>, EfCoreRepository<StudentExam>>(studentsExamsRepoBuilder);
         }

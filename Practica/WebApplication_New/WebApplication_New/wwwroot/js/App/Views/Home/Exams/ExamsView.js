@@ -31,15 +31,15 @@ class ExamsView
         this._date = value;
     }
 
-    get Subject()
-    {
-        return this._subject;
-    }
+    //get Subject()
+    //{
+    //    return this._subject;
+    //}
 
-    set Subject(value)
-    {
-        this._subject = value;
-    }
+    //set Subject(value)
+    //{
+    //    this._subject = value;
+    //}
 
     get Exams()
     {
@@ -136,7 +136,7 @@ class ExamsView
                 { name: "Title", field: "title" },
                 { name: "Text", field: "text" },
                 { name: "Date", field: "date" },
-                { name: "Subject", field: "subject" },
+                { name: "Subject", field: "subject.name" },
             ],
             onRegisterApi: function (gridApi)
             {
@@ -159,7 +159,7 @@ class ExamsView
         {
             for (let i in data)
             {                
-                this.ListSubjects.push({ value: data[i].id, display: data[i].name });
+                this.ListSubjects.push({ value: data[i], display: data[i].name });
             }            
         });        
     }
@@ -210,35 +210,43 @@ class ExamsView
     {
         if (!row.id)
         {
-            var newExam = new Exam(stTitle.value, stText.value, stDate.value, stSubject.value);
-            // or 
-            //var newSubject = new Subject(this.Name, this.Email, this.Dni, parseInt(this.ChairNumber));
-
-            this.SubjectService.AddElementAsync(newExam, (data) =>
+            if (this.SelectedItem)
             {
-                if (data)
+                var selectedSubject = this.SelectedItem.value;
+                var newExam = new Exam(this.Title, this.Text, this.Date, selectedSubject.id);
+                // or 
+                //var newSubject = new Subject(this.Name, this.Email, this.Dni, parseInt(this.ChairNumber));
+
+                this.ExamService.AddElementAsync(newExam, (data) =>
                 {
-                    if (data.isSuccess)
+                    if (data)
                     {
-                        this.RequestExams(); //this.gridOptions.data.push(data);
-                        console.log("POST-ing of data successfully!");
+                        if (data.isSuccess)
+                        {
+                            this.RequestExams(); //this.gridOptions.data.push(data);
+                            console.log("POST-ing of data successfully!");
+                        }
+                        else
+                        {
+                            this.PrintErrors(data.validation.errors);
+                            console.log("POST-ing of data is failed!");
+                        }
                     }
-                    else
-                    {
-                        this.PrintErrors(data.validation.errors);
-                        console.log("POST-ing of data is failed!");
-                    }
-                }
-            });
+                });
+            }
+            else
+            {
+                console.log("Elige el subject!");
+            }            
         }
         else
         {
             row.title = this.Title;
             row.text = this.Text;
             row.date = this.Date;
-            row.subject = this.Subject;
+            row.subject = this.SelectedItem.id;
 
-            this.SubjectService.UpdateElementAsync(row, (data) =>
+            this.ExamService.UpdateElementAsync(row, (data) =>
             {
                 if (data)
                 {
@@ -264,8 +272,8 @@ class ExamsView
         {
             this.Title = row.title;
             this.Text = row.text;
-            this.Date = row.date;
-            this.Subject = row.subject;
+            this.Date = row.date;            
+            this.SelectedItem = row.subject.name;
         }
     }
 
@@ -290,8 +298,9 @@ class ExamsView
         var emptyExam = new Object();
         emptyExam.title = "";
         emptyExam.text = "";
-        emptyExam.date = "";
-        emptyExam.subject = "";
+        emptyExam.date = new Date();
+        //emptyExam.subject = "";
+        emptyExam.subjectId = "";
         return emptyExam;
     }
 
@@ -299,8 +308,9 @@ class ExamsView
     {
         this.Title = "";
         this.Text = "";
-        this.Date = "";
-        this.Subject = "";
+        this.Date = new Date();
+        //this.Subject = "";
+        this.SelectedItem = "";
         this.RequestExams();
     }
 }

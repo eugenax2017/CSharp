@@ -12,13 +12,15 @@ namespace WebApplication_New.Boot
     {
         public FillDictionary()
         {
-            var repo = Entity.DepCon.Resolve<IRepository<Student>>();
+            var repo = Entity.DepCon.Resolve<IRepository<Exam>>();
+            var repoS = Entity.DepCon.Resolve<IRepository<Subject>>();
+            var sub = repoS.QueryAll().FirstOrDefault();
             ////var count = repo.QueryAll().ToList().Count();
-            var count = 0;
-            if (count < 3)
+            var count = 10;
+            if (count == 0)
             {
-                Student newStudent = new Student { Name = "Eugene", Dni = "123", ChairNumber = 5, Email = "eugene" };
-                newStudent.Save();
+                Exam newExam = new Exam { Title = "Maths", Text = "Maths", Date = new DateTime(), SubjectId = sub.Id };
+                newExam.Save();
             //    Subject newStudent2 = new Subject { Name = "Fisica", Teacher = "Marta" };
             //    newStudent2.Save();
             //    Subject newStudent3 = new Subject { Name = "Music", Teacher = "Marta" };

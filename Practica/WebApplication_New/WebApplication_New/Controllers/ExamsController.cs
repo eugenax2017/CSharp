@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Academy.Lib.DAL;
 using Academy.Lib.Models;
+using Common.Lib.Infrastructure;
 
 namespace WebApplication_New.Controllers
 {
@@ -46,44 +47,50 @@ namespace WebApplication_New.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutExam(Guid id, Exam exam)
+        public async Task<SaveResult<Exam>> PutExam(Guid id, Exam exam)
         {
-            if (id != exam.Id)
-            {
-                return BadRequest();
-            }
+            return await Task.Run(() => {
+                return exam.Save();
+            });
+            //if (id != exam.Id)
+            //{
+            //    return BadRequest();
+            //}
 
-            _context.Entry(exam).State = EntityState.Modified;
+            //_context.Entry(exam).State = EntityState.Modified;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!ExamExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            //try
+            //{
+            //    await _context.SaveChangesAsync();
+            //}
+            //catch (DbUpdateConcurrencyException)
+            //{
+            //    if (!ExamExists(id))
+            //    {
+            //        return NotFound();
+            //    }
+            //    else
+            //    {
+            //        throw;
+            //    }
+            //}
 
-            return NoContent();
+            //return NoContent();
         }
 
         // POST: api/Exams
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Exam>> PostExam(Exam exam)
+        public async Task<SaveResult<Exam>> PostExam(Exam exam)
         {
-            _context.Exams.Add(exam);
-            await _context.SaveChangesAsync();
+            return await Task.Run(() => {
+                return exam.Save();
+            });
+            //_context.Exams.Add(exam);
+            //await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetExam", new { id = exam.Id }, exam);
+            //return CreatedAtAction("GetExam", new { id = exam.Id }, exam);
         }
 
         // DELETE: api/Exams/5
