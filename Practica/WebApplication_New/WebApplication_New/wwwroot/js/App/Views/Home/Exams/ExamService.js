@@ -1,6 +1,5 @@
 ﻿class ExamService
 {
-
     constructor($http)
     {
         this.Http = $http;
@@ -74,6 +73,17 @@
                 console.log("DELETE-ing of data failed");
             }
         );
+    }
+
+    PrintErrors(errorArr) 
+    {
+        if (errorArr.length > 0)
+        {
+            for (let i = 0; i < errorArr.length; i++)
+            {                
+                alert(errorArr[i]);
+            }
+        }
     }
 }
 

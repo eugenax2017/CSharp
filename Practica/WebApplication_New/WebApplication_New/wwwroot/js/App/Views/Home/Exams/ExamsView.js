@@ -192,19 +192,7 @@ class ExamsView
         {
             this.Exams.push(data[i]);
         }
-    }
-
-    PrintErrors(errorArr) //don`t foget "this!"
-    {
-        if (errorArr.length > 0)
-        {
-            for (let i = 0; i < errorArr.length; i++)
-            {
-                //console.log(errorArr[i]);
-                alert(errorArr[i]);
-            }
-        }
-    }
+    }    
 
     SaveExam(row)
     {
@@ -228,7 +216,7 @@ class ExamsView
                         }
                         else
                         {
-                            this.PrintErrors(data.validation.errors);
+                            this.ExamService.PrintErrors(data.validation.errors);
                             console.log("POST-ing of data is failed!");
                         }
                     }
@@ -257,7 +245,7 @@ class ExamsView
                     }
                     else
                     {
-                        this.PrintErrors(data.validation.errors);
+                        this.ExamService.PrintErrors(data.validation.errors);
                         console.log("PUT-ing of data is failed!");
                     }
                 }
