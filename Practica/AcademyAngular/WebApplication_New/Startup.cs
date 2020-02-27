@@ -6,6 +6,7 @@ using Academy.Lib.DAL;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +29,21 @@ namespace WebApplication_New
         {
             services.AddControllersWithViews(); //add
             services.AddDbContext<AcademyDbContext>(); //add
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0); //??           
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()
+                        .AllowCredentials());
+            });  
+            // In production, the Angular files will be served from this directory
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/dist";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,10 +60,12 @@ namespace WebApplication_New
                 app.UseHsts(); //add
             }
 
+            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection(); //add            
             //app.UseDirectoryBrowser(); //let you see the content of the main directory
             app.UseDefaultFiles(); //add
-            app.UseStaticFiles(); //add
+            app.UseStaticFiles(); //add wwwroot
+            app.UseSpaStaticFiles(); 
 
             app.UseRouting();
 
@@ -62,6 +80,14 @@ namespace WebApplication_New
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+            app.UseSpa(spa =>
+            {
+                // To learn more about options for serving an Angular SPA from ASP.NET Core               
+
+                spa.Options.SourcePath = "ClientApp";
+                
             });
         }
     }
