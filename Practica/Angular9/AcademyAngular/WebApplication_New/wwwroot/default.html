@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="EstadisticaDeAlumnos">
+<head>
+    <meta charset="utf-8" />
+    <title>Estadistica de alumnos</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.8.1/ui-grid.css" integrity="sha256-sP95UDfdSzzEpZw8OEUUL29UYc6w0WhFoT+xhqO3/p4=" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.21/angular-material.min.css" integrity="sha256-qpcuZVV/FpX6TtlD2tp9rXpgrDmTPIm013++2dO2w60=" crossorigin="anonymous" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular.min.js" integrity="sha256-23hi0Ag650tclABdGCdMNSjxvikytyQ44vYGo9HyOrU=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.min.js" integrity="sha256-6vbKDGwy9JmzGKxxeypGzCjyOmACDtgheaOQT6ZVafA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js" integrity="sha256-tyfWW2LtJQNI+l3F0h6xDV/ij6Mfn8lwSKHWOsmEgXM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.8.1/ui-grid.js" integrity="sha256-czJIlCross16wIZcPRThQ/ekE0CWYLIgIswmfI1BqQs=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.8.3/i18n/ui-grid.selection.min.js" integrity="sha256-rmRX2ufkWVIQWxuK9my5wSAFYodvQTH92n8xF02pgxI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.8/angular-route.min.js" integrity="sha256-jZRUyy674QanjfVAn9YBW+d1iuxj8csDOxrwS35/GLo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+    <!-- AngularJS Material Javascript now available via Google CDN; version 1.1.10 used here -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.10/angular-material.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.7.9/angular-messages.min.js" integrity="sha256-AdbPcAJ7xwaTeBZuq+dDME+IsMMO+ZGpvDnJxpD0GO8=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular-aria.min.js"></script>
+
+    <script src="js/App/Models/LoginDto.js"></script>
+    <script src="js/App/Models/Student.js"></script>
+    <script src="js/App/Models/Subject.js"></script>
+    <script src="js/App/Models/Exam.js"></script>
+    <script src="js/App/ClientGlobals.js"></script>
+    <script src="js/App/EstadisticaDeAlumnos.js"></script>
+    <script src="js/App/Views/Index.js"></script>
+    <script src="js/App/Views/Start/Login/Login.js"></script>
+    <script src="js/App/Views/Home/Menu/Menu.js"></script>
+    <script src="js/App/Views/Home/Students/StudentsView.js"></script>
+    <script src="js/App/Views/Home/Students/StudentService.js"></script>
+    <script src="js/App/Views/Home/Subjects/SubjectsView.js"></script>
+    <script src="js/App/Views/Home/Subjects/SubjectService.js"></script>
+    <script src="js/App/Views/Home/Exams/ExamsView.js"></script>
+    <script src="js/App/Views/Home/Exams/ExamService.js"></script>
+
+</head>
+<body style="height:100vh;width:100%; margin:0px">
+    <index></index>    
+</body>
+</html>

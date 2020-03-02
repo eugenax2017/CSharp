@@ -1,0 +1,35 @@
+﻿<div class="container">
+    <h3 style="text-align: center">Welcome to the Statistics of students!</h3>
+    <input type="button" class="btn btn-info" ng-click="vm.RequestStudents()" value="Retrieve Students" />
+</div>
+<div class="container panel">
+    <div class="row">
+        <div class="col-sm-8 col-md-8">
+            <div ui-grid="vm.gridOptions" ui-grid-selection ui-grid-cellnav class="myGrid"></div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+            <div class="field panel panel-default">
+                <label for="stName">Name: </label>
+                <input type="text" id="stName" ng-model="vm.Name" size="20" />
+            </div>
+            <div class="field panel panel-default">
+                <label for="stEmail">Email: </label>
+                <input type="text" id="stEmail" ng-model="vm.Email" size="20" />
+            </div>
+            <div class="field panel panel-default">
+                <label for="stDni">Dni: </label>
+                <input type="text" id="stDni" ng-model="vm.Dni" size="20" />
+            </div>
+            <div class="field panel panel-default">
+                <label for="stChairNumber">Chair number: </label>
+                <input type="text" id="stChairNumber" ng-model="vm.ChairNumber" size="20" /><br />
+            </div>
+            <div class="buttons">
+                <input type="button" class="btn btn-info" ng-click="vm.ClearStudent()" value="Clear" />
+                <input class="btn btn-info" type="button" ng-click="vm.SaveStudent(vm.SelectedRows)" value="Save" />
+                <input type="button" class="btn btn-info" ng-click="vm.EditStudent(vm.SelectedRows)" value="Edit" />
+                <input type="button" class="btn btn-info" ng-click="vm.DeleteStudent(vm.SelectedRows)" value="Delete" />
+            </div>
+        </div>
+    </div>
+</div>

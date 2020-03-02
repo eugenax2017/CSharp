@@ -29,17 +29,17 @@ namespace WebApplication_New
         {
             services.AddControllersWithViews(); //add
             services.AddDbContext<AcademyDbContext>(); //add
-            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0); //??           
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0); // es necesario solo para vers 2           
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("CorsPolicy",
-                    builder => builder.AllowAnyOrigin()
-                        .AllowAnyMethod()
-                        .AllowAnyHeader()
-                        .AllowCredentials());
-            });  
-            // In production, the Angular files will be served from this directory
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("CorsPolicy",
+            //        builder => builder.AllowAnyOrigin()
+            //            .AllowAnyMethod()
+            //            .AllowAnyHeader()
+            //            .AllowCredentials());
+            //});  
+            //// In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
