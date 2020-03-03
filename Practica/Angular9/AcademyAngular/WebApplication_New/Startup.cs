@@ -60,12 +60,27 @@ namespace WebApplication_New
                 app.UseHsts(); //add
             }
 
-            app.UseCors("CorsPolicy");
             app.UseHttpsRedirection(); //add            
             //app.UseDirectoryBrowser(); //let you see the content of the main directory
             app.UseDefaultFiles(); //add
             app.UseStaticFiles(); //add wwwroot
-            app.UseSpaStaticFiles(); 
+            app.UseSpaStaticFiles();
+
+            //----------------para Angular 9
+            app.Use(async (ctx, next) =>
+            {
+                await next();
+                if (ctx.Response.StatusCode == 204)
+                {
+                    ctx.Response.ContentLength = 0;
+                }
+            });
+
+            app.UseCors(options =>
+                options.WithOrigins("http://localhost:4200")
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            //----------------------------------
 
             app.UseRouting();
 

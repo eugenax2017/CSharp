@@ -110,16 +110,20 @@ namespace Academy.Lib.Models
                 var repoStudents = DepCon.Resolve<IStudentsRepository>();
                 var currentStudentInChair = repoStudents.QueryAll().FirstOrDefault(s => s.ChairNumber == chairNumber);
 
-                if (currentId == default && currentStudentInChair != null)
+                if (currentStudentInChair != null)
                 {
-                    output.IsSuccess = false;
-                    output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
+                    if (currentId == default)
+                    {
+                        output.IsSuccess = false;
+                        output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
+                    }
+                    else if (currentId != default && currentStudentInChair.Id != currentId)
+                    {
+                        output.IsSuccess = false;
+                        output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
+                    }
                 }
-                else if (currentId != default && currentStudentInChair.Id != currentId)
-                {
-                    output.IsSuccess = false;
-                    output.Errors.Add($"ya hay un alumno {currentStudentInChair.Name} en la silla {chairNumber}");
-                }
+                
             }
             #endregion
 

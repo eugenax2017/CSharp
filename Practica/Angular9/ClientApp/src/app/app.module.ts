@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { StudentDetailComponent } from './student-details/student-detail/student-detail.component';
-import { StudentDetailListComponent } from './student-details/student-detail-list/student-detail-list.component';
-import { StudentDetailsComponent } from './student-details/student-details.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StudentDetailService } from './services/student-detail.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentDetailComponent,
-    StudentDetailListComponent,
-    StudentDetailsComponent
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgForm
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [StudentDetailService],
   bootstrap: [AppComponent]
