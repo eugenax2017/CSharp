@@ -1,34 +1,32 @@
-import { StudentDetailService } from './../services/student-detail.service';
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormArray, FormGroup  } from '@angular/forms';
+import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { ExamDetailService } from '../services/exam-detail.service';
 
 @Component({
-  selector: 'app-student-detail',
-  templateUrl: './student-detail.component.html',
-  styles: []
+  selector: 'app-exam-detail',
+  templateUrl: './exam-detail.component.html',
+  styleUrls: []
 })
-
-export class StudentDetailComponent implements OnInit {
-
-  studentForms: FormArray = this.fb.array([]);
+export class ExamDetailComponent implements OnInit {
+  examForms: FormArray = this.fb.array([]);
   notification = null;
 
-  constructor(private fb: FormBuilder, private studentService: StudentDetailService) { }
+  constructor(private fb: FormBuilder, private examService: ExamDetailService) { }
 
   ngOnInit(): void {
-    this.studentForms.clear();
-    this.studentService.getStudents().subscribe(
+    this.examForms.clear();
+    this.examService.getExams().subscribe(
       res => {
         if (res === []) {
-          this.addStudentForm();
+          this.addExamForm();
         } else {
-          (res as []).forEach((student: any) => {
-            this.studentForms.push(this.fb.group({
-              id: [student.id],
-              name: [student.name],
-              email: [student.email],
-              dni: [student.dni],
-              chairNumber: [student.chairNumber]
+          (res as []).forEach((exam: any) => {
+            this.examForms.push(this.fb.group({
+              id: [exam.id],
+              title: [exam.title],
+              text: [exam.text],
+              date: [exam.date],
+              subjectId: [exam.subjectId]
             }));
           });
         }
@@ -36,13 +34,13 @@ export class StudentDetailComponent implements OnInit {
     );
   }
 
-  addStudentForm() {
-    this.studentForms.push(this.fb.group({
+  addExamForm() {
+    this.examForms.push(this.fb.group({
       id: [this.returnGuidEmpty()],
-      name: [''],
-      email: [''],
-      dni: [''],
-      chairNumber: [0],
+      title: [''],
+      text: [''],
+      date: [''],
+      subjectId: ['']
     }));
   }
 
@@ -51,7 +49,7 @@ export class StudentDetailComponent implements OnInit {
     if (fg.value.id === this.returnGuidEmpty()) {
       message = 'insert';
     }
-    this.studentService.postStudent(fg.value).subscribe(
+    this.examService.postExam(fg.value).subscribe(
         (res: any) => {
            // fg.patchValue({ id: res.id });
            this.showNotification(message);
@@ -71,11 +69,11 @@ export class StudentDetailComponent implements OnInit {
 
   onDelete(id, i) {
     if (id === this.returnGuidEmpty()) {
-      this.studentForms.removeAt(i);
+      this.examForms.removeAt(i);
     } else if (confirm('Are you sure to delete this record ?')) {
-      this.studentService.deleteStudent(id).subscribe(
+      this.examService.deleteExam(id).subscribe(
         (res) => {
-          this.studentForms.removeAt(i);
+          this.examForms.removeAt(i);
           this.showNotification('delete');
         });
      }

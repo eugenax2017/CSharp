@@ -7,11 +7,17 @@ import { AppComponent } from './app.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { StudentDetailService } from './services/student-detail.service';
 import { HttpClientModule } from '@angular/common/http';
+import { SubjectDetailComponent } from './subject-detail/subject-detail.component';
+import { SubjectDetailService } from './services/subject-detail.service';
+import { ExamDetailComponent } from './exam-detail/exam-detail.component';
+import { ExamDetailService } from './services/exam-detail.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    SubjectDetailComponent,
+    ExamDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +26,11 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [StudentDetailService],
+  providers: [
+    StudentDetailService,
+    SubjectDetailService,
+    ExamDetailService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

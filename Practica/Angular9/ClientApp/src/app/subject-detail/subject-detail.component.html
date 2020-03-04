@@ -1,5 +1,5 @@
 <blockquote class="blockquote ml-5">
-  <h2>Students</h2>
+  <h2>Subjects</h2>
   <footer class="blockquote-footer">
       Using inline table editing with <i>Angular 9</i> and <i>Asp.Net Core</i>
   </footer>
@@ -8,12 +8,10 @@
   <div class="thead">
     <div class="tr">
       <div class="td">Name</div>
-      <div class="td">Email</div>
-      <div class="td">Dni</div>
-      <div class="td">Chair number</div>
+      <div class="td">Teacher</div>
       <div class="td">
-        <button class="btn btn-outline-success" (click) = "addStudentForm()">
-            <i class="fa fa-plus"></i> New Student
+        <button class="btn btn-outline-success" (click) = "addSubjectForm()">
+            <i class="fa fa-plus"></i> New Subject
         </button>
       </div>
       <div class="td">
@@ -25,18 +23,12 @@
     </div>
   </div>
   <div class="tbody">
-    <form class="tr" [formGroup]="fg" *ngFor="let fg of studentForms.controls; let i=index;">
+    <form class="tr" [formGroup]="fg" *ngFor="let fg of subjectForms.controls; let i=index;">
       <div class="td">
         <input class="form-control" formControlName="name">
       </div>
       <div class="td">
-        <input class="form-control" formControlName="email">
-      </div>
-      <div class="td">
-        <input class="form-control" formControlName="dni">
-      </div>
-      <div class="td">
-        <input type="number" class="form-control" formControlName="chairNumber">
+        <input class="form-control" formControlName="teacher">
       </div>
       <div class="td">
         <button type="submit" class="btn" (click)="recordSubmit(fg)" [disabled]="fg.invalid"
@@ -51,3 +43,4 @@
     </form>
   </div>
 </div>
+
