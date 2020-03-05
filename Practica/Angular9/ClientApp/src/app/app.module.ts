@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,20 +12,23 @@ import { SubjectDetailComponent } from './subject-detail/subject-detail.componen
 import { SubjectDetailService } from './services/subject-detail.service';
 import { ExamDetailComponent } from './exam-detail/exam-detail.component';
 import { ExamDetailService } from './services/exam-detail.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentDetailComponent,
     SubjectDetailComponent,
-    ExamDetailComponent
+    ExamDetailComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [
     StudentDetailService,

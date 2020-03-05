@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
+
 import { ExamDetailService } from '../services/exam-detail.service';
 
 @Component({
@@ -10,6 +12,9 @@ import { ExamDetailService } from '../services/exam-detail.service';
 export class ExamDetailComponent implements OnInit {
   examForms: FormArray = this.fb.array([]);
   notification = null;
+
+  model: NgbDateStruct;
+  placement = 'right';
 
   constructor(private fb: FormBuilder, private examService: ExamDetailService) { }
 
