@@ -13,7 +13,7 @@ export class ExamDetailComponent implements OnInit {
   examForms: FormArray = this.fb.array([]);
   notification = null;
 
-  model: NgbDateStruct;
+  // model: NgbDateStruct[];
   placement = 'right';
 
   constructor(private fb: FormBuilder, private examService: ExamDetailService) { }
@@ -31,6 +31,7 @@ export class ExamDetailComponent implements OnInit {
               title: [exam.title],
               text: [exam.text],
               date: [exam.date],
+              model: [this.getDateStruct(new Date(exam.date))],
               subjectId: [exam.subjectId]
             }));
           });
@@ -45,6 +46,7 @@ export class ExamDetailComponent implements OnInit {
       title: [''],
       text: [''],
       date: [''],
+      model: [this.getDateStruct(new Date())],
       subjectId: ['']
     }));
   }
@@ -54,6 +56,10 @@ export class ExamDetailComponent implements OnInit {
     if (fg.value.id === this.returnGuidEmpty()) {
       message = 'insert';
     }
+    const ngbDate = fg.value.model;
+    const nowDate = new Date();
+    fg.patchValue({date: new Date(ngbDate.year, ngbDate.month - 1, ngbDate.day,
+      nowDate.getHours() + 2, nowDate.getMinutes(), nowDate.getSeconds())});
     this.examService.postExam(fg.value).subscribe(
         (res: any) => {
            // fg.patchValue({ id: res.id });
@@ -66,6 +72,10 @@ export class ExamDetailComponent implements OnInit {
          // this.showNotification('update');
          // });
    // }
+  }
+
+  getDateStruct(date) {
+    return {year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate()};
   }
 
   returnGuidEmpty() {
