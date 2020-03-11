@@ -5,7 +5,6 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
 import { SubjectDetailComponent } from './subject-detail/subject-detail.component';
 import { ExamDetailComponent } from './exam-detail/exam-detail.component';
 
-
 const routes: Routes = [
   { path: '', component: StudentDetailComponent },
   { path: 'students', component: StudentDetailComponent },

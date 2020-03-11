@@ -1,3 +1,4 @@
+import { SubjectDetailService } from './../services/subject-detail.service';
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { NgbDateStruct } from '@ng-bootstrap/ng-bootstrap';
@@ -12,14 +13,24 @@ import { ExamDetailService } from '../services/exam-detail.service';
 export class ExamDetailComponent implements OnInit {
   examForms: FormArray = this.fb.array([]);
   notification = null;
+  subjectList = [];
 
   // model: NgbDateStruct[];
   placement = 'right';
 
-  constructor(private fb: FormBuilder, private examService: ExamDetailService) { }
+  constructor(private fb: FormBuilder, private examService: ExamDetailService,
+              private subjectService: SubjectDetailService) { }
 
   ngOnInit(): void {
     this.examForms.clear();
+    this.subjectService.getSubjects()
+      .subscribe(res => {this.subjectList = res as [];
+                         this.getExams();
+      });
+    // this.getExams();
+  }
+
+  getExams() {
     this.examService.getExams().subscribe(
       res => {
         if (res === []) {
@@ -47,7 +58,7 @@ export class ExamDetailComponent implements OnInit {
       text: [''],
       date: [''],
       model: [this.getDateStruct(new Date())],
-      subjectId: ['']
+      subjectId: [this.returnGuidEmpty()]
     }));
   }
 
@@ -75,7 +86,7 @@ export class ExamDetailComponent implements OnInit {
   }
 
   getDateStruct(date) {
-    return {year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate()};
+    return { year: date.getFullYear(), month: date.getMonth() + 1, day: date.getDate() };
   }
 
   returnGuidEmpty() {

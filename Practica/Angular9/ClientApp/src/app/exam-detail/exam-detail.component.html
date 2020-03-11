@@ -10,7 +10,7 @@
       <div class="td">Title</div>
       <div class="td">Text</div>
       <div class="td">Date</div>
-      <div class="td">SubjectId</div>
+      <div class="td">Subject</div>
       <div class="td">
         <button class="btn btn-outline-success" (click) = "addExamForm()">
             <i class="fa fa-plus"></i> New Examen
@@ -36,21 +36,24 @@
         <input class="form-control" formControlName="date">
       </div> -->
       <!--<div class="td">-->
-        <div class="form-inline td">
+        <div class="td form-inline">
           <div class="form-group">
             <div class="input-group">
               <input class="form-control" placeholder="yyyy-mm-dd" formControlName="model"
                   ngbDatepicker #d="ngbDatepicker"
                   [placement]="placement" [positionTarget]="buttonEl">
               <div class="input-group-append">
-                <button #buttonEl class="btn btn-outline-secondary calendar" (click)="d.toggle()" type="button"></button>
+                <button #buttonEl class="btn btn-outline-dark fa fa-calendar" (click)="d.toggle()" type="button"></button>
               </div>
             </div>
           </div>
         <!--</div>-->
       </div>
       <div class="td">
-        <input class="form-control" formControlName="subjectId">
+        <select class="form-control" formControlName="subjectId">
+            <option value='00000000-0000-0000-0000-000000000000'>Select</option>
+            <option *ngFor="let item of subjectList" value="{{item.id}}">{{item.name}}</option>
+        </select>
       </div>
       <div class="td">
         <button type="submit" class="btn" (click)="recordSubmit(fg)" [disabled]="fg.invalid"
