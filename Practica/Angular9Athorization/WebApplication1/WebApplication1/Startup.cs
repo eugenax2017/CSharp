@@ -27,8 +27,10 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
-            //options.UseSqlServer(
+                  options.UseSqlite(
+                    Configuration.GetConnectionString("DefaultConnection")));
+
+            //    options.UseSqlServer(
             //        Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
